@@ -135,10 +135,13 @@ h6 {
   #topbar {
     padding-left: 18px;
     padding-right: 18px;
+    background-color: #1977cc;
+    
   }
 
-  .topbar-item {
-    font-size: 18px;
+  .topbar-item, .topbar-item a {
+    font-size: 16px;
+    color: white;
   }
 }
 
@@ -146,45 +149,8 @@ h6 {
   top: -40px;
 }
 
-#topbar .contact-info a {
-  line-height: 1;
-  color: #444444;
-  transition: 0.3s;
-}
 
-#topbar .contact-info a:hover {
-  color: #1977cc;
-}
 
-#topbar .contact-info i {
-  color: #1977cc;
-  padding-right: 4px;
-  margin-left: 15px;
-  line-height: 0;
-}
-
-#topbar .contact-info i:first-child {
-  margin-left: 0;
-}
-
-.social-links {
-  font-size: 100px;
-}
-
-.social-links a {
-  color: #437099;
-  padding-left: 15px;
-  display: inline-block;
-  transition: 0.3s;
-}
-
-.social-links a:hover {
-  color: #1977cc;
-}
-
-.social-links a:first-child {
-  border-left: 0;
-}
 
 /*--------------------------------------------------------------
 # Header
@@ -197,6 +163,8 @@ h6 {
   top: 40px;
   box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
 }
+
+
 
 #header.header-scrolled {
   top: 0;
@@ -218,6 +186,25 @@ h6 {
 
 #header .logo img {
   max-height: 85px;
+}
+
+.social-links {
+  font-size: 20px;
+}
+
+.social-links a {
+  color: #437099;
+  padding-left: 15px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #1977cc;
+}
+
+.social-links a:first-child {
+  border-left: 0;
 }
 
 /**
@@ -368,6 +355,17 @@ h6 {
 }
 
 @media (max-width: 1366px) {
+
+  #header .container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  #header .container .social-links {
+    position: absolute;
+    left: 0px;
+  }
+
   .navbar .dropdown .dropdown ul {
     right: -90%;
   }
