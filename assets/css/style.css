@@ -121,8 +121,8 @@ h6 {
 # Top Bar
 --------------------------------------------------------------*/
 #topbar {
-  background: lightgray;
-  height: 40px;
+  background: white;
+  height: 60px;
   font-size: 14px;
   transition: all 0.5s;
   z-index: 996;
@@ -131,22 +131,29 @@ h6 {
   padding-left: 100px;
 }
 
+#topbar .topbar-item-right {
+  text-align: right;
+}
+
+#topbar .spanish {
+  font-size: 12px;
+}
+
 @media (max-width: 768px) {
   #topbar {
     padding-left: 18px;
     padding-right: 18px;
     background-color: #1977cc;
-    
   }
 
   .topbar-item, .topbar-item a {
-    font-size: 16px;
+    font-size: 18px;
     color: white;
   }
 }
 
 #topbar.topbar-scrolled {
-  top: -40px;
+  top: -50px;
 }
 
 
@@ -156,12 +163,17 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
+  flex-direction: row;
   background: #fff;
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
-  top: 40px;
+  top: 60px;
   box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
+}
+
+#header .container {
+  justify-content: space-between;
 }
 
 
@@ -171,6 +183,7 @@ h6 {
 }
 
 #header .logo {
+  visibility:hidden;
   font-size: 30px;
   margin: 0;
   padding: 0;
@@ -188,8 +201,9 @@ h6 {
   max-height: 85px;
 }
 
-.social-links {
-  font-size: 20px;
+#header .social-links {
+  display: flex;
+  font-size: 30px;
 }
 
 .social-links a {
@@ -205,6 +219,14 @@ h6 {
 
 .social-links a:first-child {
   border-left: 0;
+}
+
+@media (max-width: 991px) {
+  #header .container {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
 }
 
 /**
@@ -356,16 +378,6 @@ h6 {
 
 @media (max-width: 1366px) {
 
-  #header .container {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-
-  #header .container .social-links {
-    position: absolute;
-    left: 0px;
-  }
-
   .navbar .dropdown .dropdown ul {
     right: -90%;
   }
@@ -374,6 +386,8 @@ h6 {
     right: -100%;
   }
 }
+
+
 
 /**
 * Mobile Navigation 
@@ -392,6 +406,7 @@ h6 {
 }
 
 @media (max-width: 991px) {
+
   .mobile-nav-toggle {
     display: block;
   }
