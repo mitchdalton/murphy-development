@@ -45,8 +45,6 @@
     
     <div class="topbar-item topbar-item-right">
       <i class="bi bi-telephone"></i> <a href="tel:970-420-6848"> (970) 420-6848</a>
-      <br>
-      <span class="spanish"></i>Hablamos Espanol</span>
     </div>
      
     
@@ -63,10 +61,25 @@
       <nav id="navbar" class="navbar  order-lg-0">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Patient Information</a></li>
-          <li><a class="nav-link scrollto" href="#departments">Procedures</a></li>
-          <li><a class="nav-link scrollto" href="#doctors">Patient Forms</a></li>
+          <li><a class="nav-link scrollto" href="#">About</a></li>
+          <li><a class="nav-link scrollto" href="#">Patient Information</a></li>
+          <li class="dropdown"><a href="#"><span>Patient Forms</span></a>
+            <ul>
+              <li><a href="#">Form 1.pdf</a></li>
+              <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li> -->
+              <li><a href="#">Form 2.pdf</a></li>
+              <li><a href="#">Form 3.pdf</a></li>
+              <li><a href="#">Form 4.pdf</a></li>
+            </ul>
+          </li>
           <li class="dropdown"><a href="#"><span>Procedures</span></a>
             <ul>
               <li><a href="#">Procedure 1</a></li>
@@ -103,31 +116,19 @@
   <section id="hero" class="d-flex align-items-center">
     <div class="container">
       
-      <h1><img src="./assets/img/logo.png" alt=""><br> Murphy Oral & Maxillofacial Surgery</h1>
+      <h1><img class="hero-logo" src="./assets/img/logo.png" alt=""><br> Murphy Oral & Maxillofacial Surgery</h1>
       <h2>Aric A. Murphy, DDS, MD</h2>
-      <a href="#about" class="btn-get-started scrollto">Contact Us</a>
+      <a href="#about" class="btn-get-started scrollto">About Us</a>
     </div>
   </section><!-- End Hero -->
 
   <main id="main">
 
     <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us">
+    <!-- <section id="why-us" class="why-us">
       <div class="container">
 
         <div class="row">
-          <div class="col-lg-4 d-flex align-items-stretch">
-            <div class="content">
-              <h3>Why Choose Medilab?</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
-              </p>
-              <div class="text-center">
-                <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-              </div>
-            </div>
-          </div>
           <div class="col-lg-8 d-flex align-items-stretch">
             <div class="icon-boxes d-flex flex-column justify-content-center">
               <div class="row">
@@ -153,12 +154,14 @@
                   </div>
                 </div>
               </div>
-            </div><!-- End .content-->
+            </div>
+            
+            End .content
           </div>
         </div>
 
       </div>
-    </section><!-- End Why Us Section -->
+    </section>End Why Us Section -->
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
@@ -170,13 +173,25 @@
           </div>
 
           <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-            <h3>Enim quis est voluptatibus aliquid consequatur fugiat</h3>
-            <p>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus laudantium. Soluta voluptate sed facere corporis dolores excepturi. Libero laboriosam sint et id nulla tenetur. Suscipit aut voluptate.</p>
+            <h3>Oral & Maxillofacial Surgery in Fort Collins, Colorado</h3>
+            <p class="fst-italic">
+              Office Hours: 8am-5pm, Tuesday-Friday (Closed Monday)
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> In-Network with a number of Dental Insurances</li>
+              <li><i class="bi bi-check-circle"></i> We Fee Match most Out-of-Network Dental Insurances</li>
+              <li><i class="bi bi-check-circle"></i> We accept Medicaid (under 21 years of age) & CPH+</li>
+              <li><i class="bi bi-check-circle"></i> We offer a 15% discount for anyone without Dental insurance</li>
+            </ul>
+            <p>
+              Oral & Maxillofacial surgery deals with surgery for the mouth, 
+              jaw, & face. The purpose of oral & maxillofacial 
+              surgery is to correct functional problems of the mouth, jaw & face, as well as alleviate pain, & enhance one’s appearance.
+            </p>
 
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-fingerprint"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            <!-- <div class="icon-box">
+              <div class="icon"><i class="bx bx-link"></i></div>
+              <h4 class="title"><a href="">We are In-Network with a number of Dental Insurances </a></h4>
             </div>
 
             <div class="icon-box">
@@ -189,7 +204,7 @@
               <div class="icon"><i class="bx bx-atom"></i></div>
               <h4 class="title"><a href="">Dine Pad</a></h4>
               <p class="description">Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut deserunt minus aut eligendi omnis</p>
-            </div>
+            </div> -->
 
           </div>
         </div>

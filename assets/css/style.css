@@ -135,8 +135,15 @@ h6 {
   text-align: right;
 }
 
+#topbar .phone-number {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 #topbar .spanish {
   font-size: 12px;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 @media (max-width: 768px) {
@@ -153,7 +160,7 @@ h6 {
 }
 
 #topbar.topbar-scrolled {
-  top: -50px;
+  top: -60px;
 }
 
 
@@ -394,7 +401,7 @@ h6 {
 */
 .mobile-nav-toggle {
   color: #2c4964;
-  font-size: 28px;
+  font-size: 40px;
   cursor: pointer;
   display: none;
   line-height: 0;
@@ -429,18 +436,26 @@ h6 {
 }
 
 .navbar-mobile .mobile-nav-toggle {
-  position: absolute;
+  position: relative;
   top: 15px;
   right: 15px;
 }
 
+@keyframes mobile-nav-ul-appear {
+  from {right: -800px;}
+  to {right: 0;}
+}
+
 .navbar-mobile ul {
-  display: block;
+  animation-name: mobile-nav-ul-appear;
+  animation-duration: 0.3s;
+  width: 60%;
+  height: 100%;
+  display: flex;
   position: absolute;
-  top: 55px;
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
+  top: 0px;
+  right: 0px;
+  flex-direction: column;
   padding: 10px 0;
   background-color: #fff;
   overflow-y: auto;
@@ -547,7 +562,7 @@ h6 {
 #hero h2 {
   text-align: center;
   color: white;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display SC', serif;
   margin: 10px 0 0 0;
   font-size: 30px;
 }
@@ -583,17 +598,24 @@ h6 {
 
 @media (max-width: 992px) {
   #hero {
-    margin-bottom: 0;
     height: 90vh;
+    margin-bottom: -200px;
   }
 
   #hero .container {
-    padding-bottom: 63px;
+    margin-top: 0;
+  }
+
+  #hero .hero-logo {
+    height: 60px;
   }
 
   #hero h1 {
-    font-size: 50px;
+    font-size: 30px;
     line-height: 36px;
+    font-weight: 600;
+    color: black;
+    padding-bottom: 0;
   }
 
   #hero h2 {
