@@ -135,27 +135,14 @@ h6 {
   text-align: right;
 }
 
-#topbar .phone-number {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-#topbar .spanish {
-  font-size: 12px;
-  margin-top: 0;
-  padding-top: 0;
-}
-
 @media (max-width: 768px) {
   #topbar {
     padding-left: 18px;
     padding-right: 18px;
-    background-color: #1977cc;
   }
 
   .topbar-item, .topbar-item a {
     font-size: 18px;
-    color: white;
   }
 }
 
@@ -170,7 +157,6 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  flex-direction: row;
   background: #fff;
   transition: all 0.5s;
   z-index: 997;
@@ -179,25 +165,21 @@ h6 {
   box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
 }
 
-#header .container {
-  justify-content: space-between;
-}
-
-
 
 #header.header-scrolled {
   top: 0;
 }
 
 #header .logo {
-  visibility:hidden;
-  font-size: 30px;
+  font-size: 22px;
   margin: 0;
   padding: 0;
   line-height: 1;
   font-weight: 700;
   letter-spacing: 0.5px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Playfair Display SC', serif;
+  color: #2c4964;
+
 }
 
 #header .logo a {
@@ -205,7 +187,7 @@ h6 {
 }
 
 #header .logo img {
-  max-height: 85px;
+  max-height: 40px;
 }
 
 #header .social-links {
@@ -217,6 +199,7 @@ h6 {
   color: #437099;
   padding-left: 15px;
   display: inline-block;
+  line-height: 1px;
   transition: 0.3s;
 }
 
@@ -228,13 +211,7 @@ h6 {
   border-left: 0;
 }
 
-@media (max-width: 991px) {
-  #header .container {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-  }
 
-}
 
 /**
 * Appointment Button *
@@ -270,8 +247,6 @@ h6 {
 * Desktop Navigation 
 */
 #navbar {
-  display: flex;
-  justify-content:space-between;
   padding: 0;
 }
 
@@ -436,7 +411,7 @@ h6 {
 }
 
 .navbar-mobile .mobile-nav-toggle {
-  position: relative;
+  position: absolute;
   top: 15px;
   right: 15px;
 }
@@ -451,11 +426,10 @@ h6 {
   animation-duration: 0.3s;
   width: 60%;
   height: 100%;
-  display: flex;
+  display: block;
   position: absolute;
-  top: 0px;
+  top: 60px;
   right: 0px;
-  flex-direction: column;
   padding: 10px 0;
   background-color: #fff;
   overflow-y: auto;
