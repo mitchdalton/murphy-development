@@ -554,9 +554,9 @@ h6 {
 
 #hero h3 {
   text-align: center;
-  color: white;
   font-family: 'Playfair Display SC', serif;
   font-size: 20px;
+  color: white;
 }
 
 #hero .btn-get-started {
@@ -612,6 +612,11 @@ h6 {
   #hero h2 {
     font-size: 24px;
     line-height: 24px;
+  }
+
+  #hero h3 {
+    font-size: 22px;
+    color: #fff;
   }
 }
 
