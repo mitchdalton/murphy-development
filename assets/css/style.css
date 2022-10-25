@@ -32,6 +32,17 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+.reveal{
+  position: relative;
+  transform: translateY(70px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -125,7 +136,6 @@ h6 {
   height: 60px;
   font-size: 30px;
   transition: all 0.5s;
-  z-index: 996;
   justify-content: space-between;
   padding-right: 100px;
   padding-left: 100px;
@@ -190,35 +200,36 @@ h6 {
 #header {
   background: #fff;
   transition: all 0.5s;
-  z-index: 997;
   padding: 15px 0;
   top: 60px;
   box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
 }
 
+#header .container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+#header .map-call {
+  display: none;
+}
 
 #header.header-scrolled {
   top: 0;
 }
 
-#header .logo {
-  font-size: 22px;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  font-family: 'Playfair Display SC', serif;
-  color: #2c4964;
+@media (max-width: 991px) {
+  #header.header-scrolled .map-call{
+    transition: all 0.5;
+    display: flex;
+  }
 
-}
-
-#header .logo a {
-  color: #2c4964;
-}
-
-#header .logo img {
-  max-height: 40px;
+  .map-call i {
+    font-size: 30px;
+    margin-right: 20px;
+    color:#437099;
+  }
 }
 
 
@@ -399,7 +410,12 @@ h6 {
 @media (max-width: 991px) {
 
   .mobile-nav-toggle {
-    display: block;
+    display: flex;
+  }
+
+  #header.header-scrolled .container {
+    flex-direction: row;
+
   }
 
   .navbar ul {
@@ -505,12 +521,8 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-@keyframes hero-bg {
-  from {background-position: left;}
-  to {background-position: right;}
-}
 
-/* EXPERIMENTING WITH BACKGROUND SLIDESHOW */
+/* Background Animation */
 .crossfade > figure {
   animation: imageAnimation 60s linear infinite 0s;
   backface-visibility: hidden;
@@ -521,7 +533,7 @@ h6 {
   position: absolute;
   top: 0px;
   width: 100%;
-  z-index: 0;
+  z-index: -1;
 }
 .crossfade > figure:nth-child(1) { background-image: url('../img/horsetooth.jpg'); }
 .crossfade > figure:nth-child(2) {
@@ -544,32 +556,28 @@ h6 {
 @keyframes imageAnimation {  
   from {background-position: left;}
   to   {background-position: right;}
-  
   0%   {animation-timing-function: ease-in;
         opacity: 0;}
-
   2%   {animation-timing-function: ease-out;
         opacity: 1;}
-
   17%  {opacity: 1;}
-
   25%  {opacity: 0}
-
   100% {opacity: 0}
 }
-
-/* EXPERIMENTING WITH BACKGROUND SLIDESHOW */
-
-
+@keyframes hero-bg {
+  from {background-position: left;}
+  to {background-position: right;}
+}
 
 #hero {
-  /* animation-name: hero-bg; */
-  /* animation-duration: 120s; */
   width: 100%;
-  height: 800px;
+  height: 90vh;
   padding-top: 130px;
-  /* background: url("../img/horsetooth.jpg") top center; */
-  /* background-size: cover; */
+  margin-bottom: -200px;
+}
+
+#hero .crossfade {
+  z-index: 0;
 }
 
 #hero .container-2 {
@@ -651,7 +659,7 @@ h6 {
 @media (max-width: 992px) {
   #hero {
     height: 90vh;
-    margin-bottom: -150px;
+    margin-bottom: -200px;
   }
 
   #hero .container {
@@ -689,9 +697,12 @@ h6 {
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
+
 section {
+  position: relative;
   padding: 60px 0;
   overflow: hidden;
+  z-index: 2;
 }
 
 .section-bg {
@@ -838,13 +849,17 @@ section {
   background: #fff;
 }
 
+.icon-boxes-main-page {
+  flex-direction: row;
+}
+
 .why-us .icon-boxes .icon-box {
   text-align: center;
+  width: 200px;
   border-radius: 10px;
   background: #fff;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  padding: 40px 30px;
-  width: 100%;
+  padding: 0;
 }
 
 .why-us .icon-boxes .icon-box i {
