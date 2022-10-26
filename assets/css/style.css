@@ -132,27 +132,26 @@ h6 {
 # Top Bar
 --------------------------------------------------------------*/
 #topbar {
-  background: white;
+  background:#298ce5;
   height: 60px;
   font-size: 30px;
   transition: all 0.5s;
-  justify-content: space-between;
+  justify-content: center;
   padding-right: 100px;
   padding-left: 100px;
 }
 
-#topbar .topbar-item-right a {
+/* #topbar .topbar-item-right a {
   text-align: right;
   margin-left: 15px;
-}
+} */
 
 #topbar .social-links {
   display: flex;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .social-links a {
-  color: #437099;
   padding-left: 15px;
   display: inline-block;
   line-height: 1px;
@@ -160,11 +159,11 @@ h6 {
 }
 
 #topbar i {
-  color: #437099;
+  color: white;
 }
 
-.social-links a:hover {
-  color: #1977cc;
+#topbar i:hover {
+  color: black;
 }
 
 .social-links a:first-child {
@@ -176,14 +175,6 @@ h6 {
   #topbar {
     padding-left: 18px;
     padding-right: 18px;
-  }
-
-  .topbar-item-right {
-    font-size: 30px;
-  }
-
-  #top-bar .social-links i {
-    font-size: 20px;
   }
 }
 
@@ -207,7 +198,7 @@ h6 {
 
 #header .container {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -220,15 +211,16 @@ h6 {
 }
 
 @media (max-width: 991px) {
-  #header.header-scrolled .map-call{
-    transition: all 0.5;
+  #header .map-call {
     display: flex;
-  }
-
+  }  
   .map-call i {
     font-size: 30px;
     margin-right: 20px;
-    color:#437099;
+    color:#2c4964;
+  }
+  #header .container {
+    flex-direction: row-reverse;
   }
 }
 
@@ -413,11 +405,6 @@ h6 {
     display: flex;
   }
 
-  #header.header-scrolled .container {
-    flex-direction: row;
-
-  }
-
   .navbar ul {
     display: none;
   }
@@ -438,12 +425,12 @@ h6 {
 .navbar-mobile .mobile-nav-toggle {
   position: absolute;
   top: 15px;
-  right: 15px;
+  left: 15px;
 }
 
 @keyframes mobile-nav-ul-appear {
-  from {right: -800px;}
-  to {right: 0;}
+  from {left: -800px;}
+  to {left: 0;}
 }
 
 .navbar-mobile ul {
@@ -454,7 +441,7 @@ h6 {
   display: block;
   position: absolute;
   top: 60px;
-  right: 0px;
+  left: 0px;
   padding: 10px 0;
   background-color: #fff;
   overflow-y: auto;
@@ -535,38 +522,33 @@ h6 {
   width: 100%;
   z-index: -1;
 }
-.crossfade > figure:nth-child(1) { background-image: url('../img/horsetooth.jpg'); }
+.crossfade > figure:nth-child(1) { 
+  background-image: url('../img/horsetooth.jpg'); 
+}
 .crossfade > figure:nth-child(2) {
-  animation-delay: 12s;
-  background-image: url('../img/departments-1.jpg');
+  animation-delay: 15s;
+  background-image: url('../img/forest.jpg');
 }
 .crossfade > figure:nth-child(3) {
-  animation-delay: 24s;
-  background-image: url('../img/departments-3.jpg');
+  animation-delay: 30s;
+  background-image: url('../img/elk.jpg');
 }
 .crossfade > figure:nth-child(4) {
-  animation-delay: 36s;
-  background-image: url('../img/departments-5.jpg');
-}
-.crossfade > figure:nth-child(5) {
-  animation-delay: 48s;
-  background-image: url('../img/horsetooth.jpg');
+  animation-delay: 45s;
+  background-image: url('../img/horsetooth-ridge.jpg');
 }
 
 @keyframes imageAnimation {  
   from {background-position: left;}
   to   {background-position: right;}
+
   0%   {animation-timing-function: ease-in;
         opacity: 0;}
   2%   {animation-timing-function: ease-out;
         opacity: 1;}
-  17%  {opacity: 1;}
-  25%  {opacity: 0}
+  25%  {opacity: 1;}
+  30%  {opacity: 0}
   100% {opacity: 0}
-}
-@keyframes hero-bg {
-  from {background-position: left;}
-  to {background-position: right;}
 }
 
 #hero {
@@ -583,6 +565,7 @@ h6 {
 #hero .container-2 {
   align-self: flex-start;
   padding: 0;
+  padding-bottom: 10px;
   margin: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
@@ -859,7 +842,7 @@ section {
 .why-us .icon-container {
   display: flex;
   width: 33%;
-  padding: 20px;
+  padding: 10px;
 }
 
 @media (max-width: 768px) {
@@ -869,14 +852,16 @@ section {
   }
 
 .why-us .icon-box {
+  width: 100%;
   text-align: center;
   border-radius: 10px;
   background: #fff;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  padding: 0;
+  padding: 10px;
 }
 
 .why-us .icon-boxes .icon-box i {
+  display: none;
   font-size: 40px;
   color: #1977cc;
   margin-bottom: 30px;
@@ -885,12 +870,18 @@ section {
 .why-us .icon-boxes .icon-box h4 {
   font-size: 20px;
   font-weight: 700;
-  margin: 0 0 30px 0;
+  margin: 0 0 10px 0;
 }
 
 .why-us .icon-boxes .icon-box p {
   font-size: 15px;
   color: #848484;
+}
+
+.why-us .icon-boxes .icon-box img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: contain;
 }
 
 /*--------------------------------------------------------------
@@ -1117,6 +1108,10 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+.services ul {
+  text-align: left;
+}
+
 .services .icon-box {
   text-align: center;
   border: 1px solid #d5e1ed;
@@ -1895,6 +1890,30 @@ section {
   color: #444444;
   position: relative;
   padding-bottom: 12px;
+}
+
+#footer-stuff-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#footer-links-1, #footer-links-2, #footer-contact {
+  width: 33%;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 992px) {
+  #footer-links-1, #footer-links-2, #footer-contact {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  #footer-links-1, #footer-links-2, #footer-contact {
+    width: 100%;
+  }
 }
 
 #footer .footer-top .footer-links {
