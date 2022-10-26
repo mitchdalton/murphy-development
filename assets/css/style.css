@@ -671,9 +671,15 @@ h6 {
   }
 }
 
-@media (max-height: 600px) {
+@media (max-height: 840px) {
   #hero {
     height: 110vh;
+  }
+}
+
+@media (max-height: 600px) {
+  #hero {
+    height: 200vh;
   }
 }
 
