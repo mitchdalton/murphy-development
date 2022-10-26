@@ -34,9 +34,9 @@ h6 {
 
 .reveal{
   position: relative;
-  transform: translateY(40px);
+  transform: translateY(25px);
   opacity: 0;
-  transition: 0.5s all ease;
+  transition: 1s all ease;
 }
 .reveal.active{
   transform: translateY(0);
@@ -850,12 +850,26 @@ section {
 }
 
 .icon-boxes-main-page {
-  flex-direction: row;
+  display: flex;
+  flex-direction:row;
+  justify-content:center;
+  flex-wrap: wrap;
 }
 
-.why-us .icon-boxes .icon-box {
+.why-us .icon-container {
+  display: flex;
+  width: 33%;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .why-us .icon-container {
+    width: 50%;
+  }
+  }
+
+.why-us .icon-box {
   text-align: center;
-  width: 200px;
   border-radius: 10px;
   background: #fff;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
