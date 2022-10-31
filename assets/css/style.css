@@ -535,7 +535,7 @@ h6 {
 }
 .crossfade > figure:nth-child(4) {
   animation-delay: 45s;
-  background-image: url('../img/horsetooth-ridge.jpg');
+  background-image: url('../img/horsetooth.jpg');
 }
 
 @keyframes imageAnimation {  
@@ -546,6 +546,7 @@ h6 {
         opacity: 0;}
   2%   {animation-timing-function: ease-out;
         opacity: 1;}
+
   25%  {opacity: 1;}
   30%  {opacity: 0}
   100% {opacity: 0}
