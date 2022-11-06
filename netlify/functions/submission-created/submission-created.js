@@ -6,6 +6,13 @@ const process = require('process')
 
 const fetch = require('node-fetch')
 
+if (document) {
+  const message = document.getElementById('sent-message')
+  message.classList.add('d-block')
+} else {
+  console.log('WHY THE FUCK IS THERE NO DOCUMENT')
+}
+
 const { EMAIL_TOKEN } = process.env
 const handler = async (event) => {
   const { email } = JSON.parse(event.body).payload
