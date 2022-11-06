@@ -2,6 +2,13 @@
 (function() {
   "use strict";
 
+
+
+
+/**
+* elements fade into view effect
+*/
+
   const reveal = () => {
     let reveals = document.querySelectorAll(".reveal")
     
@@ -17,10 +24,10 @@
       }
     }
   }
-  
   window.addEventListener("scroll", reveal)
-  
   reveal()
+
+
 
   /**
    * Easy selector helper function
@@ -228,6 +235,35 @@
       }
     }
   });
+
+
+/**
+   * process contact form
+   */
+ const processForm = form => {
+  const data = new FormData(form)
+  data.append('form-name', 'newsletter');
+  fetch('/', {
+    method: 'POST',
+    body: data,
+  })
+  .then(() => {
+    document.getElementById('sent-message').classList.add('d-block')
+  })
+  .catch(error => {
+    document.getElementById('error-message').classList.add('d-block')
+  })
+}
+
+const emailForm = document.querySelector('.contact-form')
+if (emailForm) {
+  emailForm.addEventListener('submit', e => {
+    e.preventDefault();
+    processForm(emailForm);
+  })
+}
+
+
 
   /**
    * Initiate Pure Counter 
