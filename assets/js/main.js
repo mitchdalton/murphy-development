@@ -242,16 +242,15 @@
    */
  const processForm = form => {
   const data = new FormData(form)
-  data.append('form-name', 'newsletter');
   fetch('/', {
     method: 'POST',
     body: data,
   })
   .then(() => {
-    document.getElementById('sent-message').classList.add('d-block')
+    document.querySelector('.sent-message').classList.add('d-block')
   })
   .catch(error => {
-    document.getElementById('error-message').classList.add('d-block')
+    document.querySelector('.error-message').classList.add('d-block')
   })
 }
 
