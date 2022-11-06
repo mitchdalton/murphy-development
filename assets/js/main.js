@@ -237,33 +237,6 @@
   });
 
 
-/**
-   * process contact form
-   */
- const processForm = form => {
-  const data = new FormData(form)
-  fetch('/', {
-    method: 'POST',
-    body: data,
-  })
-  .then(() => {
-    document.querySelector('.sent-message').classList.add('d-block')
-  })
-  .catch(error => {
-    document.querySelector('.error-message').classList.add('d-block')
-  })
-}
-
-const emailForm = document.querySelector('.contact-form')
-if (emailForm) {
-  emailForm.addEventListener('submit', e => {
-    e.preventDefault();
-    processForm(emailForm);
-  })
-}
-
-
-
   /**
    * Initiate Pure Counter 
    */
