@@ -13,10 +13,10 @@
       body: data,
     })
     .then(() => {
-      form.innerHTML = `<div class="form--success">Almost there! Check your inbox for a confirmation e-mail.</div>`;
+      document.querySelector('.sent-message').classList.add('d-block')
     })
     .catch(error => {
-      form.innerHTML = `<div class="form--error">Error: ${error}</div>`;
+      document.querySelector('.error-message').classList.add('d-block')
     })
   }
 
