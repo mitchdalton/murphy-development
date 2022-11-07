@@ -4,6 +4,7 @@
 
 
 
+  const emailForm = document.querySelector('.contact-form')
 
   const processForm = form => {
     const data = new FormData(form)
@@ -13,15 +14,14 @@
       body: data,
     })
     .then(() => {
+      emailForm.reset()
       document.querySelector('.sent-message').classList.add('d-block')
     })
     .catch(error => {
-      document.querySelector('.error-message').classList.add('d-block')
+      document.querySelector('.error-message').classList.add('d-block')  
     })
   }
 
-
-  const emailForm = document.querySelector('.php-email-form')
   if (emailForm) {
     emailForm.addEventListener('submit', e => {
       e.preventDefault();
