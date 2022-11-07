@@ -13,7 +13,7 @@
       body: data,
     })
     .then(() => {
-      document.querySelector('.sent-message').style.display = 'flex'
+      form.innerHTML = `<div class="form--success">Almost there! Check your inbox for a confirmation e-mail.</div>`;
     })
     .catch(error => {
       form.innerHTML = `<div class="form--error">Error: ${error}</div>`;
@@ -24,7 +24,7 @@
   const emailForm = document.querySelector('.php-email-form')
   if (emailForm) {
     emailForm.addEventListener('submit', e => {
-      //e.preventDefault();
+      e.preventDefault();
       processForm(emailForm);
     })
   }
