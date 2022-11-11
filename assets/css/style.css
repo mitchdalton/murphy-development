@@ -701,7 +701,6 @@ section {
 
 .section-title {
   text-align: center;
-  padding-bottom: 30px;
 }
 
 .section-title h2 {
@@ -1332,9 +1331,15 @@ section {
 
 .departments .details h3 {
   font-size: 26px;
+  text-decoration: underline;
   font-weight: 600;
-  margin-bottom: 20px;
   color: #2c4964;
+}
+
+.departments .details h5 {
+  font-weight: 600;
+  color: #2c4964;
+  margin-bottom: 30px;
 }
 
 .departments .details p {
@@ -2035,3 +2040,37 @@ section {
   color: #fff;
   text-decoration: none;
 }
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Inner Pages
+--------------------------------------------------------------*/
+
+
+
+.inner-pages {
+  padding-top: 142px;
+}
+
+#inner-hero {
+  padding: 0;
+}
+
+.inner-hero-container {
+  width: 100%;
+  padding: 60px 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.inner-hero-container h2 {
+  color: white;
+}
+
