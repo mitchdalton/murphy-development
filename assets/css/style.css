@@ -32,6 +32,10 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .reveal{
   position: relative;
   transform: translateY(25px);
@@ -847,15 +851,27 @@ section {
 
 .why-us .icon-container {
   display: flex;
-  width: 33%;
+  width: 15%;
   padding: 10px;
+}
+
+@media (max-width: 1400px) {
+  .why-us .icon-container {
+    width: 25%;
+  }
+}
+
+@media (max-width: 992px) {
+  .why-us .icon-container {
+    width: 33%;
+  }
 }
 
 @media (max-width: 768px) {
   .why-us .icon-container {
     width: 50%;
   }
-  }
+}
 
 .why-us .icon-box {
   width: 100%;
@@ -1116,8 +1132,11 @@ section {
 # Services
 --------------------------------------------------------------*/
 .services ul {
-  text-align: center;
-  list-style-type: none;
+  width: fit-content;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  list-style-type: circle; 
 }
 
 @media (max-width: 992px) {
