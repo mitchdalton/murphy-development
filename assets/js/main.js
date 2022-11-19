@@ -29,6 +29,31 @@
     })
   }
 
+  /**
+   * Read More Functionality
+   */
+   let addMoreBtns = document.querySelectorAll('.read-more-button')
+   if (addMoreBtns) {
+     addMoreBtns.forEach(e => e.addEventListener('click', readMore))
+   }
+
+   function readMore() {
+    let dots = this.parentElement.querySelector('.read-more-dots')
+    let content = this.parentElement.querySelector('.read-more-content')
+    let btn = this
+    if (btn.innerText === 'READ MORE') {
+      btn.innerText = 'READ LESS'
+      dots.style.display = 'none'
+      content.style.display = 'inline'
+    } else {
+      btn.innerText = 'READ MORE'
+      dots.style.display = 'inline'
+      content.style.display = 'none'
+    }
+   }
+
+ 
+
 
 /**
 * elements fade into view effect

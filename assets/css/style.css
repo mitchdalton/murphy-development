@@ -33,7 +33,7 @@ h6 {
 }
 
 ul {
-  list-style-type: none;
+  list-style-type: disc;
 }
 
 .reveal{
@@ -980,9 +980,8 @@ section {
 }
 
 .about .video-box {
-  background: url("../img/about.jpg") center center no-repeat;
-  background-size: cover;
-  min-height: 500px;
+  background: url("../img/video-covers/wisdom-tooth-vid-cover.png") center center no-repeat;
+  background-size:contain;
 }
 
 .about .play-btn {
@@ -2163,4 +2162,80 @@ section {
   width: fit-content;
   margin-right: auto;
   margin-left: auto;
+}
+
+
+
+.inner-pages .about {
+  padding-top: 20px;
+}
+
+.procedure-container {
+  display: flex;
+  flex-flow: row wrap;
+  padding-bottom: 100px;
+}
+
+.procedure-video-container {
+  display: flex;
+  width: 50%;
+}
+
+.procedure-video {
+  display: flex;
+  width: 100%;
+  height: 400px;
+}
+
+.procedure-video-description {
+  display: flex;
+  width: 50%;
+}
+
+.inner-pages .read-more-content {
+  display: none;
+}
+
+.inner-pages .read-more-content strong {
+  text-decoration: underline;
+  padding-bottom: 10px;
+}
+
+.inner-pages .blue-rounded-button {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  width:max-content;
+  margin: 0 auto;
+  padding: 12px 35px;
+  border: none;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #fff;
+  background: #1977cc;
+}
+
+
+
+
+.inner-pages .blue-rounded-button:hover {
+  background: #3291e6;
+}
+
+@media (max-width: 768px) {
+  .procedure-container {
+    flex-flow: column wrap;
+  }
+  
+  .procedure-video-container {
+    width: 100%;
+  }
+
+  .procedure-video-description {
+    padding: 20px 20px;
+    text-align: center;
+    width: 100%;
+  }
 }
