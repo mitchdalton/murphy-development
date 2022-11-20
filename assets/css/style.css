@@ -1692,6 +1692,8 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+
+
 .contact .section-title {
   padding-bottom: 0;
 }
@@ -2167,6 +2169,10 @@ section {
   padding: 0;
 }
 
+.inner-pages .about ul {
+  list-style-type: disc;
+}
+
 .inner-pages .about .procedure-section-alt-bg-color {
   background-color: rgb(240, 239, 239);
 }
@@ -2212,7 +2218,15 @@ section {
   background-size:contain;
 }
 .inner-pages .patient-escort {
-  background: url("../img/video-covers//patient-escort-cover.png") center center no-repeat;
+  background: url("../img/video-covers/patient-escort-cover.png") center center no-repeat;
+  background-size:contain;
+}
+.inner-pages .frenectomy {
+  background: url("../img/video-covers/frenectomy-cover.png") center center no-repeat;
+  background-size:contain;
+}
+.inner-pages .bone-grafting {
+  background: url("../img/video-covers/bone-grafting-cover.png") center center no-repeat;
   background-size:contain;
 }
 
@@ -2279,6 +2293,24 @@ section {
   .procedure-video-description {
     padding: 20px 20px;
     text-align: center;
+    width: 100%;
+  }
+}
+
+
+
+.inner-pages .staff-meet {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.inner-pages .staff-box {
+  width: 50%;
+  align-self: auto;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .inner-pages .staff-box {
     width: 100%;
   }
 }
