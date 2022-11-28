@@ -509,6 +509,11 @@ ul {
   display: block;
 }
 
+
+
+
+
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -528,18 +533,22 @@ ul {
 }
 .crossfade > figure:nth-child(1) { 
   background-image: url('../img/horsetooth.jpg'); 
+  background-attachment: fixed;
 }
 .crossfade > figure:nth-child(2) {
   animation-delay: 15s;
   background-image: url('../img/forest.jpg');
+  background-attachment: fixed;
 }
 .crossfade > figure:nth-child(3) {
   animation-delay: 30s;
   background-image: url('../img/elk.jpg');
+  background-attachment: fixed;
 }
 .crossfade > figure:nth-child(4) {
   animation-delay: 45s;
   background-image: url('../img/horsetooth.jpg');
+  background-attachment: fixed;
 }
 
 @keyframes imageAnimation {  
@@ -563,7 +572,7 @@ ul {
   margin-bottom: -200px;
 }
 
-#hero .crossfade {
+.crossfade {
   z-index: 0;
 }
 
@@ -688,6 +697,9 @@ ul {
   }
 }
 
+
+
+
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -741,6 +753,9 @@ section {
 .section-title p {
   margin-bottom: 0;
 }
+
+
+
 
 /*--------------------------------------------------------------
 # Breadcrumbs
@@ -804,6 +819,9 @@ section {
   }
 }
 
+
+
+
 /*--------------------------------------------------------------
 # Why Us
 --------------------------------------------------------------*/
@@ -847,6 +865,15 @@ section {
   flex-direction:row;
   justify-content:center;
   flex-wrap: wrap;
+}
+
+.icon-boxes-main-page a {
+  color: #444444;
+}
+
+.icon-boxes-main-page a:hover {
+  color: #666666;
+  transition-duration: .25s;
 }
 
 .why-us .icon-container {
@@ -905,6 +932,9 @@ section {
   border-radius: 10px;
   object-fit: contain;
 }
+
+
+
 
 /*--------------------------------------------------------------
 # About
@@ -1127,6 +1157,13 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+.services .container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+
+}
 .services ul {
   width: fit-content;
   text-align: left;
@@ -1139,6 +1176,16 @@ section {
   .services ul {
     text-align: left;
   }
+
+  .services-para {
+    text-align: left;
+  }
+}
+
+.services .services-para {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .services .icon-box {
