@@ -36,6 +36,10 @@ ul {
   list-style-type: disc;
 }
 
+/*--------------------------------------------------------------
+# Reveal Element Effect
+--------------------------------------------------------------*/
+
 .reveal{
   position: relative;
   transform: translateY(25px);
@@ -1444,6 +1448,10 @@ section {
   background: #fff;
 }
 
+.doctors h3 {
+  padding-top: 40px;
+}
+
 .doctors .member {
   position: relative;
   box-shadow: 0px 2px 15px rgba(44, 73, 100, 0.08);
@@ -1453,7 +1461,8 @@ section {
 
 .doctors .member .pic {
   overflow: hidden;
-  width: 180px;
+  width: 30%;
+  height: auto;
   border-radius: 50%;
 }
 
@@ -1466,6 +1475,7 @@ section {
 }
 
 .doctors .member .member-info {
+  width: 70%;
   padding-left: 30px;
 }
 
@@ -1484,7 +1494,7 @@ section {
   font-weight: 500;
 }
 
-.doctors .member span::after {
+/* .doctors .member span::after {
   content: "";
   position: absolute;
   display: block;
@@ -1493,7 +1503,7 @@ section {
   background: #b2c8dd;
   bottom: 0;
   left: 0;
-}
+} */
 
 .doctors .member p {
   margin: 10px 0 0 0;
@@ -2251,6 +2261,8 @@ section {
   background-size:contain;
 }
 
+
+
 /* procedure video backgrounds */
 .inner-pages .wisdom-tooth-surgery {
   background: url("../img/video-covers/wisdom-tooth-vid-cover.png") center center no-repeat;
@@ -2277,14 +2289,22 @@ section {
   background-size:contain;
 }
 
-
 .procedure-video-description {
   display: flex;
   width: 50%;
 }
 
 .inner-pages .read-more-content {
-  display: none;
+  display: block;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.5s;
+}
+
+.inner-pages .read-more-content--open {
+  display: block;
+  opacity: 1;
+  max-height: 3000px;
 }
 
 .inner-pages .read-more-content strong {
@@ -2306,10 +2326,8 @@ section {
   transition: 0.5s;
   color: #fff;
   background: #1977cc;
+  transition: all 0.5s;
 }
-
-
-
 
 .inner-pages .blue-rounded-button:hover {
   background: #3291e6;
@@ -2346,6 +2364,9 @@ section {
 
 
 
+
+
+
 .inner-pages .staff-meet {
   display: flex;
   flex-flow: row wrap;
@@ -2361,3 +2382,14 @@ section {
     width: 100%;
   }
 }
+
+
+
+
+@media (max-width: 768px) {
+  .inner-pages .forms .icon-box {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+

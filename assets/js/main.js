@@ -29,28 +29,10 @@
     })
   }
 
-  /**
-   * Read More Functionality
-   */
-   let addMoreBtns = document.querySelectorAll('.read-more-button')
-   if (addMoreBtns) {
-     addMoreBtns.forEach(e => e.addEventListener('click', readMore))
-   }
 
-   function readMore() {
-    let dots = this.parentElement.querySelector('.read-more-dots')
-    let content = this.parentElement.querySelector('.read-more-content')
-    let btn = this
-    if (btn.innerText === 'READ MORE') {
-      btn.innerText = 'READ LESS'
-      dots.style.display = 'none'
-      content.style.display = 'inline'
-    } else {
-      btn.innerText = 'READ MORE'
-      dots.style.display = 'inline'
-      content.style.display = 'none'
-    }
-   }
+
+
+  
 
  
 
@@ -65,7 +47,7 @@
     for (let i = 0; i < reveals.length; i++) {
       const windowHeight = window.innerHeight;
       const elementTop = reveals[i].getBoundingClientRect().top
-      const elementVisible = 150;
+      const elementVisible = 75;
       
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add("active")
@@ -77,6 +59,35 @@
   window.addEventListener("scroll", reveal)
   reveal()
 
+
+
+  /**
+   * "Read More" effect
+   */
+   function delay(time) {
+    return new Promise(resolve => setTimeout(resolve, time));
+  }
+
+   let addMoreBtns = document.querySelectorAll('.read-more-button')
+   if (addMoreBtns) {
+     addMoreBtns.forEach(e => e.addEventListener('click', readMore))
+   }
+
+   function readMore() {
+    let content = this.parentElement.querySelector('.read-more-content')
+    let btn = this
+    if (btn.innerText === 'READ MORE...') {
+      content.classList.toggle('read-more-content--open')
+      btn.innerText = 'READ LESS...'
+    } else {
+      content.classList.toggle('read-more-content--open')
+      btn.innerText = 'READ MORE...'
+      
+      delay(1000).then(() => {
+        content.parentElement.querySelector('.scroll-this-into-view').scrollIntoView({block: "center"})
+      })
+    }
+   }
 
 
   /**
