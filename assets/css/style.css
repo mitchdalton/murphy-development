@@ -536,22 +536,22 @@ ul {
   z-index: -1;
 }
 .crossfade > figure:nth-child(1) { 
-  background-image: url('../img/horsetooth.jpg'); 
+  background-image: url('../img/hero-bgs/horsetooth.jpg'); 
   background-attachment: fixed;
 }
 .crossfade > figure:nth-child(2) {
   animation-delay: 15s;
-  background-image: url('../img/forest.jpg');
+  background-image: url('../img/hero-bgs/forest.jpg');
   background-attachment: fixed;
 }
 .crossfade > figure:nth-child(3) {
   animation-delay: 30s;
-  background-image: url('../img/elk.jpg');
+  background-image: url('../img/hero-bgs/elk.jpg');
   background-attachment: fixed;
 }
 .crossfade > figure:nth-child(4) {
   animation-delay: 45s;
-  background-image: url('../img/horsetooth.jpg');
+  background-image: url('../img/hero-bgs/horsetooth.jpg');
   background-attachment: fixed;
 }
 
@@ -1969,7 +1969,7 @@ section {
 
 #footer .footer-top .footer-contact h4 {
   font-size: 22px;
-  margin: 0 0 30px 0;
+  margin: 0 0 20px 0;
   padding: 2px 0 2px 0;
   line-height: 1;
   font-weight: 700;
@@ -2052,6 +2052,10 @@ section {
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
   color: #1977cc;
+}
+
+#foot-links-1 a {
+  font-size: 30px;
 }
 
 #footer .footer-newsletter {
@@ -2169,12 +2173,20 @@ section {
 
 .affiliations {
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
   padding: 10px 40px;
+  height: fit-content
 }
-.aaoms {
+
+.affiliations a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.affiliate-logo {
   width: 150px;
-  height: auto;
 }
 
 
