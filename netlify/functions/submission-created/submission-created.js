@@ -7,15 +7,16 @@ const fetch = require('node-fetch')
 const { EMAIL_TOKEN } = process.env
 
 exports.handler = async event => {
-  const email = JSON.parse(event.body).payload.email
-  console.log(`Recieved a submission: ${email}`)
-  return fetch('https://api.buttondown.email/v1/subscribers', {
+  const message = JSON.parse(event.body).payload
+  console.log(`Recieved a submission: ${message}`)
+  return fetch('https://rest.sendinc.com/message.json', {
     method: 'POST',
     headers: {
-      Authorization: `Token ${EMAIL_TOKEN}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ email }),
+      email: 'dalton05@gmail.com',
+      recipients: 'mitchelljdalton@gmail.com',
+      subject: 'First sendinc message',
+      message: 'Here is the thing posted to website',
+    }
   })
     .then(response => response.json())
     .then(data => {
@@ -23,3 +24,5 @@ exports.handler = async event => {
     })
     .catch(error => ({ statusCode: 422, body: String(error) }))
 }
+
+
