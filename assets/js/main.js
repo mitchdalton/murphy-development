@@ -4,30 +4,30 @@
 
 
 
-  const emailForm = document.querySelector('.contact-form')
+  // const emailForm = document.querySelector('.contact-form')
 
-  const processForm = form => {
-    const data = new FormData(form)
-    data.append('form-name', 'contact');
-    fetch('/', {
-      method: 'POST',
-      body: data,
-    })
-    .then(() => {
-      emailForm.reset()
-      document.querySelector('.sent-message').classList.add('d-block')
-    })
-    .catch(error => {
-      document.querySelector('.error-message').classList.add('d-block')  
-    })
-  }
+  // const processForm = form => {
+  //   const data = new FormData(form)
+  //   data.append('form-name', 'contact');
+  //   fetch('/', {
+  //     method: 'POST',
+  //     body: data,
+  //   })
+  //   .then(() => {
+  //     emailForm.reset()
+  //     document.querySelector('.sent-message').classList.add('d-block')
+  //   })
+  //   .catch(error => {
+  //     document.querySelector('.error-message').classList.add('d-block')  
+  //   })
+  // }
 
-  if (emailForm) {
-    emailForm.addEventListener('submit', e => {
-      e.preventDefault();
-      processForm(emailForm);
-    })
-  }
+  // if (emailForm) {
+  //   emailForm.addEventListener('submit', e => {
+  //     e.preventDefault();
+  //     processForm(emailForm);
+  //   })
+  // }
 
 
 
