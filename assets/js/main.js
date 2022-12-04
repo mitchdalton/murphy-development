@@ -2,45 +2,41 @@
 (function() {
   "use strict";
 
+  /**
+* FORM SUBMISSION - handle success/fail
+*/
+  const emailForm = document.querySelector('.contact-form')
 
+  if (emailForm) {
+    emailForm.addEventListener('submit', e => {
+      e.preventDefault();
+      processForm(emailForm);
+    })
+  }
 
-  // const emailForm = document.querySelector('.contact-form')
-
-  // const processForm = form => {
-  //   const data = new FormData(form)
-  //   data.append('form-name', 'contact');
-  //   fetch('/', {
-  //     method: 'POST',
-  //     body: data,
-  //   })
-  //   .then(() => {
-  //     emailForm.reset()
-  //     document.querySelector('.sent-message').classList.add('d-block')
-  //   })
-  //   .catch(error => {
-  //     document.querySelector('.error-message').classList.add('d-block')  
-  //   })
-  // }
-
-  // if (emailForm) {
-  //   emailForm.addEventListener('submit', e => {
-  //     e.preventDefault();
-  //     processForm(emailForm);
-  //   })
-  // }
-
-
-
+  const processForm = form => {
+    const data = new FormData(form)
+    data.append('form-name', 'contact');
+    fetch('/', {
+      method: 'POST',
+      body: data,
+    })
+    .then(() => {
+      emailForm.reset()
+      document.querySelector('.sent-message').classList.add('d-block')
+    })
+    .catch(error => {
+      document.querySelector('.error-message').classList.add('d-block')  
+    })
+  }
 
   
 
- 
 
 
 /**
-* elements fade into view effect
+* VISUAL EFFECT - elements slide into view on scroll
 */
-
   const reveal = () => {
     let reveals = document.querySelectorAll(".reveal")
     
@@ -62,7 +58,7 @@
 
 
   /**
-   * "Read More" effect
+   * VISUAL EFFECT - read more.../read less... functionality
    */
    function delay(time) {
     return new Promise(resolve => setTimeout(resolve, time));
@@ -88,6 +84,7 @@
       })
     }
    }
+
 
 
   /**
@@ -205,19 +202,7 @@
     this.classList.toggle('bi-x')
   })
 
-  /**
-   * Mobile nav dropdowns activate
-   */
-  // on('click', '.navbar .dropdown > a', function(e) {
-  //   if (select('#navbar').classList.contains('navbar-mobile')) {
-  //     e.preventDefault()
-  //     //this.nextElementSibling.classList.toggle('dropdown-active')
-  //   }
-  // }, true)
 
-  /**
-   * Scrool with ofset on links with a class name .scrollto
-   */
   on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
       e.preventDefault()
@@ -300,11 +285,5 @@
       }
     }
   });
-
-
-  /**
-   * Initiate Pure Counter 
-   */
-  new PureCounter();
 
 })()
