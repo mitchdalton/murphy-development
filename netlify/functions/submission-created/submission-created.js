@@ -10,12 +10,11 @@ exports.handler = async event => {
     const accountInfo = await fetch('https://rest.sendinc.com/account.json?email=dalton05@gmail.com&recipients=dalton05@gmail.com&subject=will this work&message=hey what up', {
       method: 'POST', 
       headers: {
-        Authorization: `Basic ${EMAIL_AUTH}`,
+        'Authorization': `Basic ${EMAIL_AUTH}`,
       }
     })
-    console.log(event)
-    console.log(EMAIL_AUTH)
-    console.log(await accountInfo.json())
+    .then(res => res.json())
+    .then(() => console.log('sent successfully'))
   } catch (err) {
     console.log(err)
   }
@@ -28,21 +27,6 @@ exports.handler = async event => {
 
   
 
-  // return fetch('https://rest.sendinc.com/message.json', {
-  //   method: 'POST',
-  //   headers: {
-  //     Authorization: `Basic ${EMAIL_AUTH}`,
-  //     email: 'dalton05@gmail.com',
-  //     recipients: 'mitchelljdalton@gmail.com',
-  //     subject: 'First sendinc message',
-  //     message: 'Here is the thing posted to website',
-  //   }
-  // })
-  //   .then(response => console.log(response.json()))
-  //   .then(data => {
-  //     console.log(`Submitted to SendInc:\n ${data}`)
-  //   })
-  //   .catch(error => ({ statusCode: 422, body: String(error) }))
 
 
 
