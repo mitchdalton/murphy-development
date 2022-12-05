@@ -6,18 +6,16 @@ const fetch = require('node-fetch')
 const { EMAIL_AUTH } = process.env
 
 exports.handler = async event => {
-  try {
-      fetch('https://rest.sendinc.com/message.json?email=mitchelljdalton@gmail.com&recipients=mitchelljdalton@gmail.com&subject=tim&message=timmerson', {
+  fetch('https://rest.sendinc.com/message.json?email=mitchelljdalton@gmail.com&recipients=mitchelljdalton@gmail.com&subject=tim&message=timmerson', 
+    {
       method: 'POST', 
       headers: {
         'Authorization': `Basic ${EMAIL_AUTH}`
       }
     })
-    .then(res => res.json())
-    .then((data) => console.log(data))
-  } catch (err) {
-    console.log(err)
-  }
+  .then(res => res.json())
+  .then(data => console.log(data))
+  .catch(err => console.log(err))
 }
 
 
