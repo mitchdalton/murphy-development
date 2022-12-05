@@ -7,10 +7,10 @@ const { EMAIL_AUTH } = process.env
 
 exports.handler = async event => {
   try {
-    const accountInfo = await fetch('https://rest.sendinc.com/message.json?email=dalton05@gmail.com&recipients=dalton05@gmail.com&subject=will this work&message=hey what up', {
+      fetch('https://rest.sendinc.com/message.json?email=dalton05@gmail.com&recipients=dalton05@gmail.com&subject=frik-everything', {
       method: 'POST', 
       headers: {
-        'Authorization': `Basic ${EMAIL_AUTH}`,
+        'Authorization': `Basic ${EMAIL_AUTH}`
       }
     })
     .then(res => console.log(res.json()))
