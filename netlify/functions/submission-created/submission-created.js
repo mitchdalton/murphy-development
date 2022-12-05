@@ -7,7 +7,7 @@ const { EMAIL_AUTH } = process.env
 
 exports.handler = async event => {
   try {
-    const accountInfo = await fetch('https://rest.sendinc.com/account.json', {
+    const accountInfo = await fetch('https://rest.sendinc.com/account.json?email=dalton05@gmail.com&recipients=dalton05@gmail.com&subject=will this work&message=hey what up', {
       method: 'POST', 
       headers: {
         Authorization: `Basic ${EMAIL_AUTH}`,
