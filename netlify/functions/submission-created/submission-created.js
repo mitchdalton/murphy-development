@@ -13,7 +13,7 @@ exports.handler = async event => {
         Authorization: `Basic ${EMAIL_AUTH}`,
       }
     })
-    console.log(event.json())
+    console.log(event)
     console.log(EMAIL_AUTH)
     console.log(await accountInfo.json())
   } catch (err) {
