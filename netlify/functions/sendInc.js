@@ -1,9 +1,8 @@
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 export const handler = async () => {
-  console.log('hey hey hey it looks like this is running')
   const {AUTH_CREDENTIALS, ACCOUNT_EMAIL} = process.env
-  const SENDINC_API = 'https://rest.sendinc.com/message.json'   //&subject=tim&message=timmerson
+  const SENDINC_API = `https://rest.sendinc.com/message.json?email=${ACCOUNT_EMAIL}&recipients=${ACCOUNT_EMAIL}}`   //&subject=tim&message=timmerson
   const opts = {
       method: 'POST', 
       headers: {
