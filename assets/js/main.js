@@ -26,7 +26,7 @@
     console.log('referral form works...')
     refForm.addEventListener('submit', async () => {
       console.log('submit button triggered...')
-      const response = await fetch('/.netlify/functions/submission-created.js', {
+      const response = await fetch('../.netlify/functions/sendInc', {
         method: 'POST',
       }).then(response => response.json())
     })
