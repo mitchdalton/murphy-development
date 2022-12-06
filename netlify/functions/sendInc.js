@@ -1,4 +1,4 @@
-const fetch = require('node-fetch') 
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 export const handler = async event => {
   console.log('hey hey hey it looks like this is running')
