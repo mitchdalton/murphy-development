@@ -1,4 +1,4 @@
-const fetch = require('node-fetch')
+
 
 export const handler = async event => {
   console.log('hey hey hey it looks like this is running')
