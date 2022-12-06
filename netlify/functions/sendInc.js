@@ -2,7 +2,7 @@ const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch
 
 export const handler = async () => {
   const {AUTH_CREDENTIALS, ACCOUNT_EMAIL} = process.env
-  const SENDINC_API = `https://rest.sendinc.com/message.json?email=${ACCOUNT_EMAIL}&recipients=${ACCOUNT_EMAIL}}`   //&subject=tim&message=timmerson
+  const SENDINC_API = `https://rest.sendinc.com/message.json?email=${ACCOUNT_EMAIL}&recipients=${ACCOUNT_EMAIL}`   //&subject=tim&message=timmerson
   const opts = {
       method: 'POST', 
       headers: {
@@ -16,5 +16,9 @@ export const handler = async () => {
     console.log(response.json())
     console.log('does this part run?')
   })    
-    .catch(err => console.log(err))
+  .catch(err => console.log(err))
+
+  return {
+    statuscode: 200
+  }
 }
