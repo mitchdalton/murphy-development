@@ -128,6 +128,85 @@
             </div>
           </div>
       </section>
+
+
+      <section id="contact" class="contact">
+        <div class="col-lg-8 mt-5 mt-lg-0 reveal">
+          <h5>Send Us a Message:</h5>
+          
+          
+          <form id="referral-form" name="contact" method="POST" data-netlify="true"  netlify-honeypot="bot-field" class="contact-form php-email-form">
+            
+            <div hidden aria-hidden="true">
+              <label>
+                Don't fill this out if you're human: 
+                <input name="bot-field" />
+              </label>
+            </div>
+  
+  
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              </div>
+  
+              <div class="col-md-6 form-group">
+                <input type="email" name="email" class="form-control"  id="email" placeholder="Your Email" required>
+              </div>
+  
+              <div class="col-md-6 form-group">
+                <input type="tel" name="tel" class="form-control" id="tel" placeholder="Your Phone Number" required>
+              </div>
+  
+              <div class="col-md-6 form-group">
+                <input type="text" name="subject" class="form-control"  id="subject" placeholder="Subject" required>
+              </div>
+            </div>
+  
+            <div class="form-group mt-3">
+              <textarea class="form-control" name="message" rows="5" placeholder="Please do not use this form to communicate private health information..." id="message" required></textarea>
+            </div>
+            
+            <div class="my-3">
+              <div class="loading">Loading</div>
+              <div id="error-message" class="error-message">Uh oh, Something went wrong. Please try again. If this problem persists simply give us a call.</div>
+              <div id="sent-message" class="sent-message">Your message has been sent. We'll get back to you shortly!</div>
+            </div>
+            
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div>
+        
+  
+        <div class="container ">
+          <div class="contact-page-call-email col-lg-8 mt-5 mt-lg-0 reveal">
+            <div class="">
+              <div class="info">
+  
+                <div class="address info-item ">
+                  <i class="bi bi-geo-alt"></i>
+                  <h4>Location:</h4>
+                  <a target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/2AN1MMtrPtAnvxNN6">
+                    <p>1136 East Stuart Street <br>Building 3, Suite 240 <br>Fort Collins, CO 80525</p>
+                  </a>
+                </div>
+  
+                <div class="fax info-item">
+                  <i class="bi bi-printer"></i>
+                  <h4>Fax:</h4>
+                  <p>970-682-2183</p>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="google-map" class="reveal">
+          <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12123.897487132344!2d-105.0569954!3d40.5642432!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x79f62f7360b7b19d!2sMurphy%20OMS%20%7C%20Aric%20Murphy%20DDS!5e0!3m2!1sen!2sus!4v1666634664325!5m2!1sen!2sus" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+  
+      </section>
     
   </main><!-- End #main -->
 
