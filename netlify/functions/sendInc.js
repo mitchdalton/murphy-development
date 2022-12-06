@@ -12,6 +12,10 @@ export const handler = async () => {
     }
 
   await fetch(SENDINC_API+ACCOUNT_EMAIL, opts)
-  .then(response => response.json())
-  .catch(err => console.log(err))
+  .then(response => {
+    response.json()
+    console.log(response.json())
+    console.log('does this part run?')
+  })    
+    .catch(err => console.log(err))
 }
