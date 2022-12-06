@@ -13,6 +13,5 @@ export const handler = async event => {
   const response = await fetch(SENDINC_API+ACCOUNT_EMAIL, opts)
   const data = await response.json()
   await console.log(data)
-
 }
 
