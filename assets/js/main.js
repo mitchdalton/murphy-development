@@ -23,12 +23,11 @@
 */
   const refForm = document.getElementById('referral-form')
   if (refForm) {
-    console.log('referral form works...')
     refForm.addEventListener('submit', async () => {
-      console.log('submit button triggered...')
       const response = await fetch('../.netlify/functions/sendInc', {
         method: 'POST',
       }).then(response => response.json())
+      .catch(err => console.log(err))
     })
   }
   
