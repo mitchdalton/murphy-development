@@ -4,7 +4,7 @@ export const handler = async (event, context) => {
   const {AUTH_CREDENTIALS, ACCOUNT_EMAIL} = process.env
   const SENDINC_API = `https://rest.sendinc.com/message.json?email=${ACCOUNT_EMAIL}&recipients=${ACCOUNT_EMAIL}`
   
-  console.log(SENDINC_API, opts)
+  console.log(SENDINC_API)
   
   const response = await fetch(SENDINC_API, {
     method: 'POST', 
