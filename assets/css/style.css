@@ -537,22 +537,22 @@ ul {
 }
 .crossfade > figure:nth-child(1) { 
   background-image: url('../img/hero-bgs/horsetooth.jpg'); 
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 }
 .crossfade > figure:nth-child(2) {
   animation-delay: 15s;
   background-image: url('../img/hero-bgs/forest.jpg');
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 }
 .crossfade > figure:nth-child(3) {
   animation-delay: 30s;
   background-image: url('../img/hero-bgs/elk.jpg');
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 }
 .crossfade > figure:nth-child(4) {
   animation-delay: 45s;
   background-image: url('../img/hero-bgs/horsetooth.jpg');
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 }
 
 @keyframes imageAnimation {  
@@ -651,11 +651,11 @@ ul {
   background: #3291e6;
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
   }
-}
+} */
 
 @media (max-width: 992px) {
   #hero {
