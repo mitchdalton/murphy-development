@@ -2310,3 +2310,59 @@ section {
   }
 }
 
+
+
+
+
+
+
+
+
+/* Referring Offices */
+.referral {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.referral .about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  border-right: 1px black solid;
+
+}
+
+.referral .contact {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  padding: 20px 40px;
+}
+
+.referral .contact p {
+  text-align: center;
+}
+
+.referral .contact input::file-selector-button {
+  border-radius: 5px;
+  color: white;
+  background-color:#1977cc;
+  margin-left: 1px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 4px 4px;
+}
+
+@media (max-width: 992px) {
+  .referral .about {
+    width: 100%;
+    border: 0;
+  }
+
+  .referral .contact {
+    width: 100%;
+
+  }
+}
