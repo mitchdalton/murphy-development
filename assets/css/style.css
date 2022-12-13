@@ -1332,6 +1332,10 @@ section {
   margin-bottom: 0;
 }
 
+.inner-pages .departments .staff-pic {
+  margin: 40px 0;
+}
+
 @media (max-width: 992px) {
   .departments .nav-link {
     border: 0;
@@ -2178,6 +2182,19 @@ section {
   background-size:contain;
 }
 
+.inner-pages .patient-forms::before {
+  content: "";
+  background-image: url("../img/other/forms.jpg");
+  opacity: 0.1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  background-attachment: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
 
 
 /* procedure video backgrounds */
@@ -2365,4 +2382,23 @@ section {
     width: 100%;
 
   }
+}
+
+
+
+
+
+
+.inner-pages .patient-info::before {
+  content: "";
+  background-image: url("../img/other/testimonials.jpg");
+  opacity: 0.1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  background-attachment: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
 }

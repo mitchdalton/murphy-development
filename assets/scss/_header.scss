@@ -38,6 +38,7 @@
     a {
       color: lighten($secondary, 15);
       padding-left: 15px;
+      display: inline-block;
       line-height: 1px;
       transition: 0.3s;
       &:hover {
