@@ -2380,7 +2380,10 @@ section {
 
   .referral .contact {
     width: 100%;
+  }
 
+  .referral h4 {
+    text-align: center;
   }
 }
 
