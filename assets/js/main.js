@@ -74,12 +74,13 @@
     let btn = this
     if (btn.innerText === 'READ MORE...') {
       content.classList.toggle('read-more-content--open')
+      content.style.display = 'inline';
       btn.innerText = 'READ LESS...'
     } else {
       content.classList.toggle('read-more-content--open')
       btn.innerText = 'READ MORE...'
-      
-      delay(1000).then(() => {
+      content.style.display = 'block';
+      delay(500).then(() => {
         content.parentElement.querySelector('.scroll-this-into-view').scrollIntoView({block: "center"})
       })
     }

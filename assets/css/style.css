@@ -2182,7 +2182,7 @@ section {
   background-size:contain;
 }
 
-.inner-pages .patient-forms::before {
+/* .inner-pages .patient-forms::before {
   content: "";
   background-image: url("../img/other/forms.jpg");
   opacity: 0.1;
@@ -2194,7 +2194,7 @@ section {
   right: 0px;
   bottom: 0px;
   left: 0px;
-}
+} */
 
 
 /* procedure video backgrounds */
@@ -2229,14 +2229,12 @@ section {
 }
 
 .inner-pages .read-more-content {
-  display: block;
   opacity: 0;
   max-height: 0;
   transition: all 0.5s;
 }
 
 .inner-pages .read-more-content--open {
-  display: block;
   opacity: 1;
   max-height: 3000px;
 }
@@ -2247,6 +2245,7 @@ section {
 }
 
 .inner-pages .blue-rounded-button {
+  display: flex;
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
@@ -2254,6 +2253,7 @@ section {
   letter-spacing: 1px;
   width:max-content;
   margin: 0 auto;
+  margin-top: 15px;
   padding: 12px 35px;
   border: none;
   border-radius: 50px;
