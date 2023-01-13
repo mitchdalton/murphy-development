@@ -11,6 +11,8 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 a {
@@ -205,6 +207,7 @@ ul {
 }
 
 #header .container {
+  width: fit-content;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -228,6 +231,7 @@ ul {
     color:#2c4964;
   }
   #header .container {
+    width: auto;
     flex-direction: row-reverse;
   }
 }
@@ -943,6 +947,40 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.patient-forms .row {
+  padding: 40px;
+}
+
+.patient-forms .row .forms {
+  width: 60%;
+}
+
+.patient-forms .row .forms :first-child {
+  margin-top: 0px;
+}
+
+.patient-forms .row .forms-pic {
+  width: 40%;
+  height: auto;
+}
+
+.patient-forms .row .forms-pic img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px gray;
+}
+
+@media (max-width:900px) {
+  .patient-forms .row .forms {
+    width: 100%;
+  }
+  .patient-forms .row .forms-pic {
+    display: none;
+  }
+
+}
+
 .about .icon-boxes h4 {
   font-size: 18px;
   color: #4b7dab;
@@ -1328,6 +1366,36 @@ section {
   box-shadow: 1px 1px 10px gray;
 }
 
+.certificates-container {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 5px;
+}
+
+.certificates-container figure {
+  width: 180px;
+}
+
+.certificates-container img {
+  width: 180px;
+  transition: ease-in-out 0.3s;
+}
+
+
+.certificates-container img:hover {
+  transform: scale(1.1)
+}
+
+.certificates-container figcaption {
+  padding-top: 8px;
+  text-align: center;
+  color:#6c757d;
+  font-size: smaller;
+}
+
 .departments .details p:last-child {
   margin-bottom: 0;
 }
@@ -1359,11 +1427,19 @@ section {
   padding-top: 40px;
 }
 
+.doctors .staff-meet {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
 .doctors .member {
   position: relative;
   box-shadow: 0px 2px 15px rgba(44, 73, 100, 0.08);
   padding: 30px;
   border-radius: 10px;
+  background-color: white;
 }
 
 .doctors .member .pic {
@@ -1400,17 +1476,6 @@ section {
   position: relative;
   font-weight: 500;
 }
-
-/* .doctors .member span::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 1px;
-  background: #b2c8dd;
-  bottom: 0;
-  left: 0;
-} */
 
 .doctors .member p {
   margin: 10px 0 0 0;
@@ -2182,19 +2247,7 @@ section {
   background-size:contain;
 }
 
-/* .inner-pages .patient-forms::before {
-  content: "";
-  background-image: url("../img/other/forms.jpg");
-  opacity: 0.1;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  background-attachment: fixed;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-} */
+
 
 
 /* procedure video backgrounds */
@@ -2358,6 +2411,10 @@ section {
   padding: 20px 40px;
 }
 
+.referral .contact h4 {
+  text-align: center;
+}
+
 .referral .contact p {
   text-align: center;
 }
@@ -2382,16 +2439,11 @@ section {
     width: 100%;
   }
 
-  .referral h4 {
-    text-align: center;
-  }
+  
 }
 
 
-
-
-
-
+/* Page Backgrounds */
 .inner-pages .patient-info::before {
   content: "";
   background-image: url("../img/other/testimonials.jpg");
@@ -2405,3 +2457,32 @@ section {
   bottom: 0px;
   left: 0px;
 }
+
+.inner-pages .doctors::before {
+  content: "";
+  background-image: url("../img/other/gallery-1.jpg");
+  opacity: 0.1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  background-attachment: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.inner-pages .referral::before {
+  content: "";
+  background-image: url("../img/other/documents.jpg");
+  opacity: 0.1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  background-attachment: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
