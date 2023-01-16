@@ -2210,6 +2210,10 @@ section {
   margin-left: auto;
 }
 
+.inner-pages .google-reviews {
+  width: 100%;
+  height: 600px;
+}
 
 
 .inner-pages .about {
