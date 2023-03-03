@@ -5,17 +5,13 @@
   /**
 * CONTACT FORM SUBMISSION - confirm submission
 */
-  // const emailForm = document.querySelector('.contact-form')
-  // if (emailForm) {
-  //   emailForm.addEventListener('submit', e => {
-  //     e.preventDefault();
-  //     emailForm.reset()
-  //     document.querySelector('.sent-message').classList.add('d-block')
-  //     delay(3000).then(() => {
-  //       document.querySelector('.sent-message').classList.remove('d-block')
-  //     })
-  //   })
-  // }
+  const emailForm = document.getElementById('referral-form')
+  if (emailForm) {
+    emailForm.addEventListener('submit', e => {
+      e.preventDefault();
+      emailForm.reset()
+    })
+  }
 
 
    /**
@@ -26,8 +22,19 @@
     refForm.addEventListener('submit', async () => {
       const response = await fetch('../.netlify/functions/sendInc', {
         method: 'POST',
-      }).then(response => response.json())
-      .catch(err => console.log(err))
+      }).then(response => {
+        document.querySelector('.sent-message').classList.add('d-block')
+        delay(3000).then(() => {
+          document.querySelector('.sent-message').classList.remove('d-block')
+        })
+        return response.json()})
+      .catch(err => {
+        document.querySelector('.error-message').classList.add('d-block')
+        delay(3000).then(() => {
+          document.querySelector('.error-message').classList.remove('d-block')
+        })
+        console.log(err)
+      })
     })
   }
   
