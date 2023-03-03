@@ -257,15 +257,14 @@
 
 
     <div class="col-lg-8 mt-5 mt-lg-0 reveal">
-      <!-- <form action="forms/contact.php" method="post" role="form" class="php-email-form"> -->
-      <form name="contact" method="POST" data-netlify="true"  netlify-honeypot="bot-field" class="contact-form php-email-form">
+      <form name="contact-us-home-page" method="POST" data-netlify="true"  netlify-honeypot="bot-field" class="contact-form php-email-form">
+        
         <div hidden aria-hidden="true">
           <label>
             Don't fill this out if you're human: 
-            <input name="bot-field" />
+            <input name="bot-field"/>
           </label>
         </div>
-
 
         <div class="row">
           <div class="col-md-6 form-group">
@@ -280,11 +279,6 @@
 
           <div class="col-md-6 form-group">
             <input type="tel" name="tel" class="form-control" id="tel" placeholder="Your Phone Number*" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required>
-            <div class="validate"></div>
-          </div>
-
-          <div class="col-md-6 form-group">
-            <input type="text" name="subject" class="form-control"  id="subject" placeholder="Subject*" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required>
             <div class="validate"></div>
           </div>
 
@@ -316,7 +310,7 @@
 
         
         <div class="form-group mt-3">
-          <textarea class="form-control" name="message" rows="5" placeholder="Comments/Questions (Please do not use this form to communicate private health information...)" id="message" required></textarea>
+          <textarea class="form-control" name="message" rows="5" placeholder="Comments/Questions&#10;(Please do not use this form to communicate private health information.)" id="message" required></textarea>
         </div>
         <span>* required</span>
         
