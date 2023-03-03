@@ -8,7 +8,7 @@
   const emailForm = document.querySelector('.contact-form')
   if (emailForm) {
     emailForm.addEventListener('submit', e => {
-      e.preventDefault();
+      //e.preventDefault();
       emailForm.reset()
       document.querySelector('.sent-message').classList.add('d-block')
       delay(3000).then(() => {
