@@ -170,7 +170,7 @@
 
       <div class="col-lg-8 mt-5 mt-lg-0 reveal">
         <h5>Contact Us Online:</h5>
-        <form name="contact-us" action="/form-submit-success.html" method="POST" data-netlify="true"  netlify-honeypot="bot-field" class="contact-form php-email-form">
+        <form name="Contact-Us" action="/form-submit-success.html" method="POST" data-netlify="true"  netlify-honeypot="bot-field" class="contact-form php-email-form">
         
           <div hidden aria-hidden="true">
             <label>
@@ -181,18 +181,15 @@
   
           <div class="row">
             <div class="col-md-6 form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name*" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required>
-              <div class="validate"></div>
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name*" required>
             </div>
   
             <div class="col-md-6 form-group">
-              <input type="email" name="email" class="form-control"  id="email" placeholder="Your Email*" data-rule="email" data-msg="Please enter a valid email" required>
-              <div class="validate"></div>
+              <input type="email" name="email" class="form-control"  id="email" placeholder="Your Email*" required>
             </div>
   
             <div class="col-md-6 form-group">
-              <input type="tel" name="tel" class="form-control" id="tel" placeholder="Your Phone Number*" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required>
-              <div class="validate"></div>
+              <input type="tel" name="tel" class="form-control" id="tel" placeholder="Your Phone Number*" required>
             </div>
   
             <div class="col-md-6 form-group">
@@ -204,7 +201,6 @@
                 <option value="advertisement">TMJ Disorder</option>
                 <option value="other">Other</option>
               </select>
-              <div class="validate"></div>
             </div>
   
             <div class="col-md-6 form-group">
@@ -216,13 +212,13 @@
                 <option value="advertisement">Advertisement</option>
                 <option value="other">Other</option>
               </select>
-              <div class="validate"></div>
             </div>
   
           </div>
   
           <div class="form-group mt-3">
-            <textarea class="form-control" name="message" rows="5" placeholder="Comments/Questions&#10;(Please do not use this form to communicate private health information.)" id="message" required></textarea>
+            <textarea class="form-control" name="message" rows="5" placeholder="Comments/Questions&#10;
+              (Please do not use this form to communicate private health information.)" id="message"></textarea>
           </div>
           <span>* required</span>
           
