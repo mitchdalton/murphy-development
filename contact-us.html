@@ -170,7 +170,7 @@
 
       <div class="col-lg-8 mt-5 mt-lg-0 reveal">
         <h5>Contact Us Online:</h5>
-        <form name="contact-us" method="POST" data-netlify="true"  netlify-honeypot="bot-field" class="contact-form php-email-form">
+        <form id="contact-us-form" name="contact-us" action="/contact-us.html#contact-us-form" method="POST" data-netlify="true"  netlify-honeypot="bot-field" class="contact-form php-email-form">
           
           <div hidden aria-hidden="true">
             <label>
@@ -200,12 +200,6 @@
 
           <div class="form-group mt-3">
             <textarea class="form-control" name="message" rows="5" placeholder="Please do not use this form to communicate private health information..." id="message" required></textarea>
-          </div>
-          
-          <div class="my-3">
-            <div class="loading">Loading</div>
-            <div id="error-message" class="error-message">Uh oh, Something went wrong. Please try again. If this problem persists simply give us a call.</div>
-            <div id="sent-message" class="sent-message">Your message has been sent. We'll get back to you shortly!</div>
           </div>
           
           <div class="text-center"><button type="submit">Send Message</button></div>
