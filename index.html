@@ -269,25 +269,56 @@
 
         <div class="row">
           <div class="col-md-6 form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name*" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required>
+            <div class="validate"></div>
           </div>
 
           <div class="col-md-6 form-group">
-            <input type="email" name="email" class="form-control"  id="email" placeholder="Your Email" required>
+            <input type="email" name="email" class="form-control"  id="email" placeholder="Your Email*" data-rule="email" data-msg="Please enter a valid email" required>
+            <div class="validate"></div>
           </div>
 
           <div class="col-md-6 form-group">
-            <input type="tel" name="tel" class="form-control" id="tel" placeholder="Your Phone Number" required>
+            <input type="tel" name="tel" class="form-control" id="tel" placeholder="Your Phone Number*" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required>
+            <div class="validate"></div>
           </div>
 
           <div class="col-md-6 form-group">
-            <input type="text" name="subject" class="form-control"  id="subject" placeholder="Subject" required>
+            <input type="text" name="subject" class="form-control"  id="subject" placeholder="Subject*" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required>
+            <div class="validate"></div>
           </div>
+
+          <div class="col-md-6 form-group">
+            <select name="reason-for-contact" id="reason-for-contact" class="form-select">
+              <option value="">I am interested in:</option>
+              <option value="search-engine">Scheduling an Appointment</option>
+              <option value="social-media">Dental Implant</option>
+              <option value="friend-family">Wisdom Teeth Extraction</option>
+              <option value="advertisement">TMJ Disorder</option>
+              <option value="other">Other</option>
+            </select>
+            <div class="validate"></div>
+          </div>
+
+          <div class="col-md-6 form-group">
+            <select name="how-did-you-hear-about-us" id="hear-about" class="form-select">
+              <option value="">How did you hear about us?</option>
+              <option value="search-engine">Search Engine</option>
+              <option value="social-media">Social Media</option>
+              <option value="friend-family">Friend/Family</option>
+              <option value="advertisement">Advertisement</option>
+              <option value="other">Other</option>
+            </select>
+            <div class="validate"></div>
+          </div>
+
         </div>
 
+        
         <div class="form-group mt-3">
-          <textarea class="form-control" name="message" rows="5" placeholder="Please do not use this form to communicate private health information..." id="message" required></textarea>
+          <textarea class="form-control" name="message" rows="5" placeholder="Comments/Questions (Please do not use this form to communicate private health information...)" id="message" required></textarea>
         </div>
+        <span>* required</span>
         
         <div class="my-3">
           <div class="loading">Loading</div>
