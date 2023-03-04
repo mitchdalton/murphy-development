@@ -9,7 +9,9 @@ export const handler = async (event, context) => {
   const response = await fetch(SENDINC_API, {
     method: 'POST', 
       headers: {
-        'Authorization': `Basic ${Buffer.from(AUTH_CREDENTIALS).toString('base64')}`
+        'Authorization': `Basic ${Buffer.from(AUTH_CREDENTIALS).toString('base64')}`,
+        email: "jack@union.jack",
+        subject: "hello this is a subject"
       }
   })
   

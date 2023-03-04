@@ -2,32 +2,28 @@
 (function() {
   "use strict";
 
-  /**
-* CONTACT FORM SUBMISSION - confirm submission
-*/
-  const emailForm = document.getElementById('referral-form')
-  if (emailForm) {
-    emailForm.addEventListener('submit', e => {
-      e.preventDefault();
-      emailForm.reset()
-    })
-  }
 
 
    /**
 *  FILE UPLOAD FORM SUBMISSION
 */
   const refForm = document.getElementById('referral-form')
-  if (refForm) {
-    refForm.addEventListener('submit', async () => {
-      const response = await fetch('../.netlify/functions/sendInc', {
+  if (refForm) {                                                                  // if there is a form, proceed
+    refForm.addEventListener('submit', async () => {                              // listen to the "submit button" and fire when hit
+      e.preventDefault();                                                         // stop anything that normally happens
+      
+      // form data will go here
+
+      const response = await fetch('../.netlify/functions/sendInc', {             // send a post request to the server side function on netlify
         method: 'POST',
-      }).then(response => {
-        document.querySelector('.sent-message').classList.add('d-block')
+      })
+      .then(response => {                                                   
+        document.querySelector('.sent-message').classList.add('d-block')          // 
         delay(3000).then(() => {
           document.querySelector('.sent-message').classList.remove('d-block')
         })
-        return response.json()})
+        return response.json()
+      })
       .catch(err => {
         document.querySelector('.error-message').classList.add('d-block')
         delay(3000).then(() => {
@@ -36,6 +32,7 @@
         console.log(err)
       })
     })
+    emailForm.reset()
   }
   
 
