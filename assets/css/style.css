@@ -1746,6 +1746,19 @@ section {
   padding-bottom: 8px;
 }
 
+.contact .form-select {
+  color: gray;
+}
+
+.contact .form-select option {
+  color: black;
+}
+
+.contact .form-select option:first-child {
+  color: gray;
+}
+
+
 .contact .php-email-form .error-message {
   display: none;
   color: #fff;

@@ -92,6 +92,17 @@
    }
 
 
+      /**
+   * <select> form color fix
+   */
+      function alterColor() {
+        const col = this.selectedIndex == 0 ? 'gray' : 'black'
+        this.style.color = col
+      }
+      let selectElements = document.querySelectorAll('.form-select')
+      selectElements.forEach(e => e.addEventListener('change', alterColor))
+
+  
 
   /**
    * Easy selector helper function
@@ -104,6 +115,9 @@
       return document.querySelector(el)
     }
   }
+
+
+   
 
   /**
    * Easy event listener function
@@ -259,37 +273,6 @@
     selector: '.galelry-lightbox'
   });
 
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 10000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-
-      1200: {
-        slidesPerView: 2,
-        spaceBetween: 20
-      }
-    }
-  });
+  
 
 })()
