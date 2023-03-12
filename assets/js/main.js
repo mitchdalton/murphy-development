@@ -10,31 +10,31 @@
    /**
 *  FILE UPLOAD FORM SUBMISSION
 */
-  const refForm = document.getElementById('referral-form')
-  if (refForm) {
-    refForm.addEventListener('submit', async () => {
-      refForm.reset()
-      // form data will go here
+  // const refForm = document.getElementById('referral-form')
+  // if (refForm) {
+  //   refForm.addEventListener('submit', async () => {
+  //     refForm.reset()
+  //     // form data will go here
 
-      const response = await fetch('../.netlify/functions/sendInc', {
-        method: 'POST',
-      })
-      .then(response => {
-        document.querySelector('.sent-message').classList.add('d-block')
-        delay(3000).then(() => {
-          document.querySelector('.sent-message').classList.remove('d-block')
-        })
-        return response.json()
-      })
-      .catch(err => {
-        document.querySelector('.error-message').classList.add('d-block')
-        delay(3000).then(() => {
-          document.querySelector('.error-message').classList.remove('d-block')
-        })
-        console.log(err)
-      })
-    })
-  }
+  //     const response = await fetch('../.netlify/functions/sendInc', {
+  //       method: 'POST',
+  //     })
+  //     .then(response => {
+  //       document.querySelector('.sent-message').classList.add('d-block')
+  //       delay(3000).then(() => {
+  //         document.querySelector('.sent-message').classList.remove('d-block')
+  //       })
+  //       return response.json()
+  //     })
+  //     .catch(err => {
+  //       document.querySelector('.error-message').classList.add('d-block')
+  //       delay(3000).then(() => {
+  //         document.querySelector('.error-message').classList.remove('d-block')
+  //       })
+  //       console.log(err)
+  //     })
+  //   })
+  // }
   
 
 
