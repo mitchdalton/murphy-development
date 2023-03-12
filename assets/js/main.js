@@ -10,15 +10,7 @@
 *   REFERRAL FILE UPLOAD FORM SUBMISSION
 */
   const refForm = document.getElementById('referral-form')
-  
-  refForm.addEventListener('submit', async (e) => {
-    e.preventDefault()
-    let docName = document.getElementById('referring-doctor').value;
-    let patientName = document.getElementById('referral-patient').value;
-    // eventually figure out how to include a file
-    submitFunc(docName, patientName);
-  })
-
+  if (refForm) {
     const submitFunc = (doc, pat) => {
       fetch('../.netlify/functions/sendInc', {
         method: 'POST',
@@ -33,6 +25,17 @@
         // some kind of UI responding to submission
       })
     }
+    const onRefSubmit = (e) => {
+      e.preventDefault()
+      let docName = document.getElementById('referring-doctor').value;
+      let patientName = document.getElementById('referral-patient').value;
+      // eventually figure out how to include a file
+      submitFunc(docName, patientName);
+    }
+    refForm.addEventListener('submit', onRefSubmit)
+  }
+  
+  
     
     
     
