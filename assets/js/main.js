@@ -12,7 +12,7 @@
   const refForm = document.getElementById('referral-form')
   if (refForm) {
     const submitFunc = (doc, pat) => {
-      fetch('../.netlify/functions/sendInc', {
+      fetch('netlify/functions/sendInc', {
         method: 'POST',
         body: JSON.stringify({
           doctor: doc,
