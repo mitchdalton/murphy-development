@@ -2,16 +2,14 @@ import fetch from 'node-fetch'
 
 export const handler = async (event, context) => {
   const {AUTH_CREDENTIALS, ACCOUNT_EMAIL} = process.env
-  const SENDINC_API = `https://rest.sendinc.com/message.json?email=${ACCOUNT_EMAIL}&recipients=${ACCOUNT_EMAIL}`
+  const SENDINC_API = `https://rest.sendinc.com/message.json?email=${ACCOUNT_EMAIL}&recipients=dalton05@gmail.com&subject=hello&message=dafuq`
   
   console.log(SENDINC_API)
   
   const response = await fetch(SENDINC_API, {
     method: 'POST', 
       headers: {
-        'Authorization': `Basic ${Buffer.from(AUTH_CREDENTIALS).toString('base64')}`,
-        email: "jack@union.jack",
-        subject: "hello this is a subject"
+        'Authorization': `Basic ${Buffer.from(AUTH_CREDENTIALS).toString('base64')}`
       }
   })
   
