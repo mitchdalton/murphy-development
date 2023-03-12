@@ -1,11 +1,22 @@
 import fetch from 'node-fetch'
+import {parse} from 'querystring'
+
 
 export const handler = async (event, context) => {
   const {AUTH_CREDENTIALS, ACCOUNT_EMAIL} = process.env
-  console.log(event.queryStringParameters)
+  console.log('EVENT.QUERYSTRINPARAMS STUPID THING!!!!!********!!!!!*******!!!!!!', event.queryStringParameters)
+  let body = {}
+  try {
+    body = JSON.parse(event.body)
+  } catch (e) {
+    body = parse(event.body)
+  }
+
+  console.log('CONSOOOLLLEEE LOGGGING BODDDDYYYYYYYYYYYYYYYYYY&*&^&(@&*^#&@#%$%@^&*#^))@^*@#%^(@#%^&($@^&*#$',body)
+
   // const name = event.queryStringParameters.name
-  // const subject = event.queryStringParameters.subject
-  // const message = ''
+  // const subject = 'Patient Referral from *doc name*
+  // const message = '*doc name* has sent a referral form for *patient name*'
 
   const SENDINC_API = `https://rest.sendinc.com/message.json?email=${ACCOUNT_EMAIL}&recipients=dalton05@gmail.com&subject=hello&message=dafuq-`  
 
