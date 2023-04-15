@@ -10,12 +10,16 @@
 *   REFERRAL FILE UPLOAD FORM SUBMISSION
 */
   
-  const submitRefForm = (doc, pat) => {
+  const submitRefForm = (formData) => {
     fetch('../.netlify/functions/sendInc', {
       method: 'POST',
       body: JSON.stringify({
-        doctor: doc,
-        patient: pat
+        "Patient name"      : formData.patientName,
+        "Referring doctor"  : formData.docName,
+        "Requested service" : formData.serviceReq,
+        "Radiographs"       : formData.radiographs,
+        "Comments"          : formData.comments,
+        "Appointment time"  : formData.apptTime
       })
     }).then(response => {
       return response.json();
@@ -27,12 +31,15 @@
 
   const onRefSubmit = (e) => {
     e.preventDefault()
-    let docName = document.getElementById('referring-doctor').value;
-    let patientName = document.getElementById('referral-patient').value;
-    // ... more vars
-    // ... more vars
-    // ... include file somehow
-    submitRefForm(docName, patientName); // <--- include all the vars... maybe wrap in object or something
+    const formData = {
+      patientName : document.getElementById('referral-patient').value,
+      docName     : document.getElementById('referring-doctor').value,
+      serviceReq  : document.getElementById('service-requested').value,
+      radiographs : document.getElementById('radiographs').value,
+      comments    : document.getElementById('comments').value,
+      apptTime    : document.getElementById('appt-date-time').value,
+    }
+    submitRefForm(formData); 
   }
 
   const refForm = document.getElementById('referral-form')
