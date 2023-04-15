@@ -9,7 +9,7 @@
   const submitRefForm = (formData) => {
 
     console.log('ABOUT TO FETCH TO THE SERVERLESS FUNCTION!!!! ')
-    fetch('../netlify/functions/sendInc', {
+    fetch('../.netlify/functions/sendInc', {
       method: 'POST',
       body: JSON.stringify({
         patientName : formData.patientName,
@@ -49,8 +49,6 @@
   if (refForm) {
     console.log('REF FORM EXISTS... SUBMITTING!!!')
     refForm.addEventListener('submit', onRefSubmit)
-  } else {
-    console.log ('THIS SHIT AINT REAL AND IM GONNA FREAK OUT')
   }
 
   
