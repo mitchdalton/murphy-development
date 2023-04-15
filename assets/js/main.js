@@ -2,15 +2,13 @@
 (function() {
   "use strict";
 
-
-
-
-
    /**
 *   REFERRAL FILE UPLOAD FORM SUBMISSION
 */
   
   const submitRefForm = (formData) => {
+
+    console.log('ABOUT TO FETCH TO THE SERVERLESS FUNCTION!!!! ')
     fetch('../netlify/functions/sendInc', {
       method: 'POST',
       body: JSON.stringify({
@@ -22,6 +20,8 @@
         apptTime    : formData.apptTime
       })
     }).then(response => {
+
+      console.log('WE FETCHED! WE ARE NOW IN THE THEN STATEMENT. HERE IS THE RESPONSE JSON!!!', response.json())
       return response.json();
     }).then(data => {
       console.log('data from function', data)
@@ -39,12 +39,18 @@
       comments    : document.getElementById('comments').value,
       apptTime    : document.getElementById('appt-date-time').value,
     }
+
     submitRefForm(formData); 
+
+    return console.log('JUST MADE THE OBJECT WITH ALL THE STUFF... HERE IT IS!!!!', formData)
   }
 
   const refForm = document.getElementById('referral-form')
   if (refForm) {
+    console.log('REF FORM EXISTS... SUBMITTING!!!')
     refForm.addEventListener('submit', onRefSubmit)
+  } else {
+    console.log ('THIS SHIT AINT REAL AND IM GONNA FREAK OUT')
   }
 
   
