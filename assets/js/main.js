@@ -11,7 +11,7 @@
 */
   
   const submitRefForm = (formData) => {
-    fetch('../.netlify/functions/sendInc', {
+    fetch('../netlify/functions/sendInc', {
       method: 'POST',
       body: JSON.stringify({
         patientName : formData.patientName,
