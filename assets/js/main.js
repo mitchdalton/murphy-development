@@ -7,8 +7,6 @@
 */
   
   const submitRefForm = (formData) => {
-
-    console.log('ABOUT TO FETCH TO THE SERVERLESS FUNCTION!!!! ')
     fetch('../.netlify/functions/sendInc', {
       method: 'POST',
       body: JSON.stringify({
@@ -20,8 +18,6 @@
         apptTime    : formData.apptTime
       })
     }).then(response => {
-
-      console.log('WE FETCHED! WE ARE NOW IN THE THEN STATEMENT. HERE IS THE RESPONSE JSON!!!', response.json())
       return response.json();
     }).then(data => {
       console.log('data from function', data)
@@ -38,16 +34,13 @@
       radiographs : document.getElementById('radiographs').value,
       comments    : document.getElementById('comments').value,
       apptTime    : document.getElementById('appt-date-time').value,
+      file        : document.getElementById('referral-file').value
     }
-
     submitRefForm(formData); 
-
-    return console.log('JUST MADE THE OBJECT WITH ALL THE STUFF... HERE IT IS!!!!', formData)
   }
 
   const refForm = document.getElementById('referral-form')
   if (refForm) {
-    console.log('REF FORM EXISTS... SUBMITTING!!!')
     refForm.addEventListener('submit', onRefSubmit)
   }
 
