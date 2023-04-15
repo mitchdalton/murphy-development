@@ -14,12 +14,12 @@
     fetch('../.netlify/functions/sendInc', {
       method: 'POST',
       body: JSON.stringify({
-        "Patient name"      : formData.patientName,
-        "Referring doctor"  : formData.docName,
-        "Requested service" : formData.serviceReq,
-        "Radiographs"       : formData.radiographs,
-        "Comments"          : formData.comments,
-        "Appointment time"  : formData.apptTime
+        patientName : formData.patientName,
+        docName     : formData.docName,
+        serviceReq  : formData.serviceReq,
+        radiographs : formData.radiographs,
+        comments    : formData.comments,
+        apptTime    : formData.apptTime
       })
     }).then(response => {
       return response.json();
