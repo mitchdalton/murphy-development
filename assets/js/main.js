@@ -9,32 +9,38 @@
    /**
 *   REFERRAL FILE UPLOAD FORM SUBMISSION
 */
-  const refForm = document.getElementById('referral-form')
-
-  if (refForm) {
-    const submitFunc = (doc, pat) => {
-      fetch('../.netlify/functions/sendInc', {
-        method: 'POST',
-        body: JSON.stringify({
-          doctor: doc,
-          patient: pat
-        })
-      }).then(response => {
-        return response.json();
-      }).then(data => {
-        console.log('data from function', data)
-        // some kind of UI responding to submission
+  
+  const submitRefForm = (doc, pat) => {
+    fetch('../.netlify/functions/sendInc', {
+      method: 'POST',
+      body: JSON.stringify({
+        doctor: doc,
+        patient: pat
       })
-    }
-    const onRefSubmit = (e) => {
-      e.preventDefault()
-      let docName = document.getElementById('referring-doctor').value;
-      let patientName = document.getElementById('referral-patient').value;
-      // eventually figure out how to include a file
-      submitFunc(docName, patientName);
-    }
+    }).then(response => {
+      return response.json();
+    }).then(data => {
+      console.log('data from function', data)
+      // some kind of UI responding to submission
+    })
+  }
+
+  const onRefSubmit = (e) => {
+    e.preventDefault()
+    let docName = document.getElementById('referring-doctor').value;
+    let patientName = document.getElementById('referral-patient').value;
+    // ... more vars
+    // ... more vars
+    // ... include file somehow
+    submitRefForm(docName, patientName); // <--- include all the vars... maybe wrap in object or something
+  }
+
+  const refForm = document.getElementById('referral-form')
+  if (refForm) {
     refForm.addEventListener('submit', onRefSubmit)
   }
+
+  
   
   
     
