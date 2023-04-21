@@ -34,7 +34,7 @@
       radiographs : document.getElementById('radiographs').value,
       comments    : document.getElementById('comments').value,
       apptTime    : document.getElementById('appt-date-time').value,
-      file        : document.getElementById('referral-file').value
+      //file        : document.getElementById('referral-file').value
     }
     submitRefForm(formData); 
   }
