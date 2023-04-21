@@ -2,39 +2,49 @@
 (function() {
   "use strict";
 
-
-
-
-
    /**
 *   REFERRAL FILE UPLOAD FORM SUBMISSION
 */
-  const refForm = document.getElementById('referral-form')
-
-  if (refForm) {
-    const submitFunc = (doc, pat) => {
-      fetch('../.netlify/functions/sendInc', {
-        method: 'POST',
-        body: JSON.stringify({
-          doctor: doc,
-          patient: pat
-        })
-      }).then(response => {
-        return response.json();
-      }).then(data => {
-        console.log('data from function', data)
-        // some kind of UI responding to submission
+  
+  const submitRefForm = (formData) => {
+    fetch('../.netlify/functions/sendInc', {
+      method: 'POST',
+      body: JSON.stringify({
+        patientName : formData.patientName,
+        docName     : formData.docName,
+        serviceReq  : formData.serviceReq,
+        radiographs : formData.radiographs,
+        comments    : formData.comments,
+        apptTime    : formData.apptTime
       })
+    }).then(response => {
+      return response.json();
+    }).then(data => {
+      console.log('data from function', data)
+      // some kind of UI responding to submission
+    })
+  }
+
+  const onRefSubmit = (e) => {
+    e.preventDefault()
+    const formData = {
+      patientName : document.getElementById('referral-patient').value,
+      docName     : document.getElementById('referring-doctor').value,
+      serviceReq  : document.getElementById('service-requested').value,
+      radiographs : document.getElementById('radiographs').value,
+      comments    : document.getElementById('comments').value,
+      apptTime    : document.getElementById('appt-date-time').value,
+      //file        : document.getElementById('referral-file').value
     }
-    const onRefSubmit = (e) => {
-      e.preventDefault()
-      let docName = document.getElementById('referring-doctor').value;
-      let patientName = document.getElementById('referral-patient').value;
-      // eventually figure out how to include a file
-      submitFunc(docName, patientName);
-    }
+    submitRefForm(formData); 
+  }
+
+  const refForm = document.getElementById('referral-form')
+  if (refForm) {
     refForm.addEventListener('submit', onRefSubmit)
   }
+
+  
   
   
     
