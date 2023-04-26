@@ -6,8 +6,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <title>Murphy Oral & Maxillofacial Surgery</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+    <meta content="Business: Murphy Oral & Maxillofacial Surgery, Service: Oral surgery in Fort Collins, Colorado" name="description">
+    <meta content="oral surgery, dentist, dental, surgery, oral, wisdom tooth, teeth, tooth, extraction, fort collins, colorado, northern colorado, impacted" name="keywords">
 
     <!-- Favicons -->
     <link href="assets/img//logos/logo-small.png" rel="icon">
@@ -116,6 +116,7 @@
 
       <!-- ======= Patient Form Section ======= -->
       <section class="referral">
+        
         <section id="about" class="about reveal">
           <div class="container-fluid">
             <div class="row forms">
@@ -145,16 +146,57 @@
               
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="referring-doctor" placeholder="Referring Doctor" required>
+                  <input type="text" name="patient-name" class="form-control"  id="referral-patient" placeholder="Patient Name" required>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <input type="text" name="referring-doctor" class="form-control" id="referring-doctor" placeholder="Referring Doctor" required>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <select name="service-requested" id="service-requested" class="form-select">
+                    <option value="">Service Requested:</option>
+                    <option value="Extractions">Extractions</option>
+                    <option value="Expose-and-bond">Expose & bond</option>
+                    <option value="Dental-implant">Dental implant</option>
+                    <option value="Orthognathic">Orthognathic</option>
+                    <option value="Alveolar-cleft-graft">Aveolar cleft graft</option>
+                    <option value="Facial-trauma">Facial trauma</option>
+                    <option value="Biopsy-of-lesion">Biopsy of lesion</option>
+                    <option value="Cyst/tumor">Cyst/tumor</option>
+                    <option value="TMJ/TMD">TMJ / TMD</option>
+                    <option value="Sleep-apnea">Sleep apnea</option>
+                    <option value="Alveoloplasty">Alveoloplasty</option>
+                    <option value="Craniofacial">Craniofacial</option>
+                    <option value="Facial-skin-lesion">Facial skin lesion</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <select name="radiographs" id="radiographs" class="form-select">
+                    <option value="">Radiographs:</option>
+                    <option value="Sent-with-patient">Sent with patient</option>
+                    <option value="Sent-via-email">Sent via e-mail</option>
+                    <option value="Please-take">Please take</option>
+                    
+                  </select>
+                </div>
+
+                <div class="form-group mt-3">
+                  <textarea class="form-control" name="Comments" rows="5" placeholder="Comments" id="comments"></textarea>
+                </div>
+
+                <label for="Appt-date">Appointment date/time:</label>
+                <div class="col-md-6 form-group">
+                  <input type="datetime-local" name="Appt-date-time" class="form-control" id="appt-date-time" value="Appointment date/time">
                 </div>
     
-                <div class="col-md-6 form-group">
-                  <input type="text" name="patientName" class="form-control"  id="referral-patient" placeholder="Patient Name" required>
-                </div>
-  
                 <div class="form-group">
-                  <input type="file" name="file" class="form-control" id="referral-file" accept=".pdf,.doc,.docx">
+                  <input type="file" name="file" class="form-control" id="referral-file" multiple>
                 </div>
+
+
 
                 
               </div>
@@ -168,6 +210,7 @@
             </form>
           </div>
         </section> -->
+      
       </section>
       
   </main><!-- End #main -->

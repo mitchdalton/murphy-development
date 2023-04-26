@@ -3,6 +3,7 @@ import {parse} from 'querystring'
 
 
 export const handler = async (event, context) => {
+  
   const {AUTH_CREDENTIALS, ACCOUNT_EMAIL} = process.env
   let body = {}
   
@@ -12,9 +13,14 @@ export const handler = async (event, context) => {
     body = parse(event.body)
   }
 
-  const subject = `Patient referral from ${body.doctor}`
-  const message = `${body.doctor} has sent a referral for ${body.patient}`
-
+  const subject = `Patient referral from ${body.docName}`
+  const message = `Patient name: ${body.patientName} \n
+                   Referring doctor: ${body.docName} \n
+                   Service requested: ${body.serviceReq} \n
+                   Radiographs: ${body.radiographs} \n
+                   Appointment date: ${body.apptTime} \n
+                   Additional comments: ${body.comments}`
+                   
   const SENDINC_API = `https://rest.sendinc.com/message.json?email=${ACCOUNT_EMAIL}&recipients=dalton05@gmail.com&subject=${subject}&message=${message}`  
 
   const response = await fetch(SENDINC_API, {
