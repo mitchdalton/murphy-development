@@ -35,6 +35,7 @@
     const uploadedFiles = document.getElementById('referral-file')
     let fileData = new FormData()
     fileData.append('userfile', uploadedFiles)
+    console.log(fileData)
     
     const formData = {
       patientName : document.getElementById('referral-patient').value,

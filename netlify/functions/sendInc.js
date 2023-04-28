@@ -14,12 +14,12 @@ export const handler = async (event, context) => {
   }
 
   const subject = `Patient Referral from ${body.docName}`
-  const message = `Patient name: ${body.patientName}        \n
+  const message = `<p>Patient name: ${body.patientName}        \n
                    Referring doctor: ${body.docName}         \n
                    Service requested: ${body.serviceReq}        \n
                    Radiographs: ${body.radiographs}         \n
                    Appointment date: ${body.apptTime}         \n
-                   Additional comments: ${body.comments}`
+                   Additional comments: ${body.comments}</p>`
   const attachedFiles = body.files 
                    
   const SENDINC_API = `https://rest.sendinc.com/message.json?
