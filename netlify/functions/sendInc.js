@@ -35,6 +35,8 @@ export const handler = async (event, context) => {
       'Content-Dispostion': attachedFiles
     }
   })
+
+  console.log(response)
   
   if (response) {
     return {
