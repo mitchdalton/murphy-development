@@ -21,7 +21,7 @@ export const handler = async (event, context) => {
                    Appointment date: ${body.apptTime} \n
                    Additional comments: ${body.comments}`
                    
-  const SENDINC_API = `https://rest.sendinc.com/message.json?email=${ACCOUNT_EMAIL}&recipients=dalton05@gmail.com&subject=${subject}&message=${message}`  
+  const SENDINC_API = `https://rest.sendinc.com/message.json?email=${ACCOUNT_EMAIL}&recipients=dalton05@gmail.com&subject=${subject}&message=${message}&att_0=@${body.files[0]}`  
 
   const response = await fetch(SENDINC_API, {
     method: 'POST', 
