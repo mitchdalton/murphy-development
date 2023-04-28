@@ -34,7 +34,7 @@
     
     const uploadedFiles = document.getElementById('referral-file')
     let fileData = new FormData()
-    fileData.append('userfile', uploadedFiles)
+    fileData.append('userfile', uploadedFiles[0])
     console.log(fileData)
     
     const formData = {
