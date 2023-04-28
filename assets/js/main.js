@@ -32,9 +32,9 @@
   const onRefSubmit = (e) => {
     e.preventDefault()
     
-    const files = document.getElementById('referral-file')
-    let data = new FormData()
-    data.append('file', files.files[0])
+    const uploadedFiles = document.getElementById('referral-file')
+    let fileData = new FormData()
+    fileData.append('userfile', uploadedFiles)
     
     const formData = {
       patientName : document.getElementById('referral-patient').value,
@@ -43,7 +43,7 @@
       radiographs : document.getElementById('radiographs').value,
       comments    : document.getElementById('comments').value,
       apptTime    : document.getElementById('appt-date-time').value,
-      files       : files
+      files       : fileData
     }
     submitRefForm(formData); 
   }
