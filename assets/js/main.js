@@ -32,9 +32,9 @@
   const onRefSubmit = (e) => {
     e.preventDefault()
     
-    const uploadedFiles = document.getElementById('referral-file')
-    let fileData = new FormData()
-    fileData.append('userfile', uploadedFiles[0])
+    // const uploadedFiles = document.getElementById('referral-file')
+    // let fileData = new FormData()
+    // fileData.append('userfile', uploadedFiles[0])
     
     const formData = {
       patientName : document.getElementById('referral-patient').value,

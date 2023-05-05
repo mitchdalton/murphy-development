@@ -21,7 +21,7 @@ export const handler = async (event, context) => {
                    Radiographs: ${body.radiographs}\n
                    Appointment date: ${body.apptTime}\n
                    Additional comments: ${body.comments}</p>`
-  const attachedFiles = body.files 
+  //const attachedFiles = body.files 
                    
   const SENDINC_API = `https://rest.sendinc.com/message.json?
                                   email=info@murphyoms.com&
