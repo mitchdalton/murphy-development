@@ -24,7 +24,7 @@ export const handler = async (event, context) => {
                    
   const SENDINC_API = `https://rest.sendinc.com/message.json?
                                   email=${ACCOUNT_EMAIL}&
-                                  recipients=dalton05@gmail.com&
+                                  recipients=info@murphyoms.com&
                                   subject=${subject}&
                                   message=${message}`  
 
