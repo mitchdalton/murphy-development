@@ -12,11 +12,11 @@
       body: JSON.stringify({
         patientName : formData.patientName,
         docName     : formData.docName,
+        docEmail    : formData.docEmail,
         serviceReq  : formData.serviceReq,
         radiographs : formData.radiographs,
         comments    : formData.comments,
         apptTime    : formData.apptTime,
-        files       : formData.files
       })
     }).then(response => {
       return response.json();
@@ -35,16 +35,15 @@
     const uploadedFiles = document.getElementById('referral-file')
     let fileData = new FormData()
     fileData.append('userfile', uploadedFiles[0])
-    console.log(fileData)
     
     const formData = {
       patientName : document.getElementById('referral-patient').value,
       docName     : document.getElementById('referring-doctor').value,
+      docEmail    : document.getElementById('referring-doctor-email').value,
       serviceReq  : document.getElementById('service-requested').value,
       radiographs : document.getElementById('radiographs').value,
       comments    : document.getElementById('comments').value,
       apptTime    : document.getElementById('appt-date-time').value,
-      files       : fileData
     }
     submitRefForm(formData); 
   }

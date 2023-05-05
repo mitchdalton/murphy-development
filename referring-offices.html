@@ -145,13 +145,20 @@
             <form id="referral-form" name="referrals" enctype="multipart/form-data" method="POST" class="contact-form php-email-form">
               
               <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="patient-name" class="form-control"  id="referral-patient" placeholder="Patient Name" required>
-                </div>
 
                 <div class="col-md-6 form-group">
                   <input type="text" name="referring-doctor" class="form-control" id="referring-doctor" placeholder="Referring Doctor" required>
                 </div>
+  
+                <div class="col-md-6 form-group">
+                  <input type="text" name="referring-doctor-email" class="form-control" id="referring-doctor-email" placeholder="Referring Doctor Email" required>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <input type="text" name="patient-name" class="form-control"  id="referral-patient" placeholder="Patient Name" required>
+                </div>
+
+                
 
                 <div class="col-md-6 form-group">
                   <select name="service-requested" id="service-requested" class="form-select">
@@ -183,18 +190,20 @@
                   </select>
                 </div>
 
+                <label for="Appt-date">Appointment date/time:</label>
+                <div class="col-md-6 form-group">
+                  <input type="date" name="Appt-date-time" class="form-control" id="appt-date-time" value="Appointment date">
+                </div>
+
                 <div class="form-group mt-3">
                   <textarea class="form-control" name="Comments" rows="5" placeholder="Comments" id="comments"></textarea>
                 </div>
 
-                <label for="Appt-date">Appointment date/time:</label>
-                <div class="col-md-6 form-group">
-                  <input type="datetime-local" name="Appt-date-time" class="form-control" id="appt-date-time" value="Appointment date/time">
-                </div>
+                
     
-                <div class="form-group">
+                <!-- <div class="form-group">
                   <input type="file" name="file" class="form-control" id="referral-file" multiple>
-                </div>
+                </div> -->
 
 
               </div>
