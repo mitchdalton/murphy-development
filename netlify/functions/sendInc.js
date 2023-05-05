@@ -13,7 +13,7 @@ export const handler = async (event, context) => {
     body = parse(event.body)
   }
 
-  const subject = `Patient Referral from ${body.docName}`
+  const subject = `Website Patient Referral from ${body.docName}`
   const message = `<p style="padding: 20px">
                       <b>Referring doctor:</b> ${body.docName} <br><br>
                       <b>Doctor email:</b> ${body.docEmail} <br><br>
@@ -27,7 +27,7 @@ export const handler = async (event, context) => {
   //const attachedFiles = body.files 
                    
   const SENDINC_API = `https://rest.sendinc.com/message.json?
-                                  email=mitchelljdalton@gmail.com&
+                                  email=info@murphyoms.com&
                                   recipients=dalton05@gmail.com&
                                   subject=${subject}&
                                   message=${message}`  
