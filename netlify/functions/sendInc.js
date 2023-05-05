@@ -14,11 +14,11 @@ export const handler = async (event, context) => {
   }
 
   const subject = `Patient Referral from ${body.docName}`
-  const message = `<p>Patient name: ${body.patientName}        \n
-                   Referring doctor: ${body.docName}         \n
-                   Service requested: ${body.serviceReq}        \n
-                   Radiographs: ${body.radiographs}         \n
-                   Appointment date: ${body.apptTime}         \n
+  const message = `<p>Patient name: ${body.patientName}\n
+                   Referring doctor: ${body.docName}\n
+                   Service requested: ${body.serviceReq}\n
+                   Radiographs: ${body.radiographs}\n
+                   Appointment date: ${body.apptTime}\n
                    Additional comments: ${body.comments}</p>`
   const attachedFiles = body.files 
                    
@@ -32,7 +32,6 @@ export const handler = async (event, context) => {
     method: 'POST', 
     headers: {
       'Authorization': `Basic ${Buffer.from(AUTH_CREDENTIALS).toString('base64')}`,
-      'Content-Dispostion': attachedFiles
     }
   })
 
