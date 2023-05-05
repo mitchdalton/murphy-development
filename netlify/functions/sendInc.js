@@ -27,7 +27,7 @@ export const handler = async (event, context) => {
   //const attachedFiles = body.files 
                    
   const SENDINC_API = `https://rest.sendinc.com/message.json?
-                                  email=info@murphyoms.com&
+                                  email=mitchelljdalton@gmail.com&
                                   recipients=dalton05@gmail.com&
                                   subject=${subject}&
                                   message=${message}`  
