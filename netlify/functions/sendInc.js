@@ -27,8 +27,8 @@ export const handler = async (event, context) => {
   //const attachedFiles = body.files 
                    
   const SENDINC_API = `https://rest.sendinc.com/message.json?
-                                  email=${body.docEmail}&
-                                  recipients=dalton05@gmail.com&
+                                  email=info@murphyoms.com&
+                                  recipients=info@murphyoms.com&
                                   subject=${subject}&
                                   message=${message}`  
 
@@ -50,6 +50,6 @@ export const handler = async (event, context) => {
   
   return {
     statuscode: 200,
-    body: response ? response : {}
+    body: response ? response : {'did it work?':'no'}
   }
 }

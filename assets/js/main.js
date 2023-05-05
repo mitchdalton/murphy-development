@@ -19,6 +19,7 @@
         apptTime    : formData.apptTime,
       })
     }).then(response => {
+      console.log(response.json())
       return response.json();
     }).then(data => {
       console.log('data from function', data)
