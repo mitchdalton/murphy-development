@@ -14,12 +14,12 @@ export const handler = async (event, context) => {
   }
 
   const subject = `Patient Referral from ${body.docName}`
-  const message = `<p>Referring doctor: ${body.docName}\n
-                   Referring doctor's email: ${body.docEmail}\n
-                   Patient name: ${body.patientName}\n
-                   Service requested: ${body.serviceReq}\n
-                   Radiographs: ${body.radiographs}\n
-                   Appointment date: ${body.apptTime}\n
+  const message = `<p>Referring doctor: ${body.docName} <br>
+                   Referring doctor's email: ${body.docEmail} <br>
+                   Patient name: ${body.patientName} <br>
+                   Service requested: ${body.serviceReq} <br>
+                   Radiographs: ${body.radiographs} <br>
+                   Appointment date: ${body.apptTime} <br>
                    Additional comments: ${body.comments}</p>`
   //const attachedFiles = body.files 
                    
