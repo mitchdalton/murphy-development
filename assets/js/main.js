@@ -22,7 +22,7 @@
       return response.json();
     }).then(data => {
       console.log('data from function', data)
-      // some kind of UI responding to submission
+      window.location.href = '/form-submit-success.html'
     })
   }
 
