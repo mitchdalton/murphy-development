@@ -156,12 +156,18 @@
 
       <div class="col-lg-8 mt-5 mt-lg-0 reveal">
         <h5>Contact Us Online:</h5>
-        <form name="Contact-Us" action="/form-submit-success.html" method="POST" data-netlify="true"  netlify-honeypot="bot-field" class="contact-form php-email-form">
+        <form name="Contact-Us" 
+              class="contact-form php-email-form"
+              action="/form-submit-success.html" 
+              method="POST" 
+              data-netlify="true"  
+              netlify-honeypot="bot-field"
+              data-netlify-recaptcha="true" >
         
+          <!-- Honeypot. Netlify will reject form submission if a bot fills this out -->
           <div hidden aria-hidden="true">
             <label>
-              Don't fill this out if you're human: 
-              <input name="bot-field"/>
+              Don't fill this out if you're human: <input name="bot-field"/>
             </label>
           </div>
   
@@ -210,6 +216,10 @@
             <textarea class="form-control" name="message" rows="5" placeholder="Comments/Questions&#10;(Please do not use this form to communicate private health information.)" id="message"></textarea>
           </div>
           <span>* required</span>
+
+          <div class="form-group form-captcha" data-netlify-recaptcha="true">
+            <!-- netlify rendered CAPTCHA -->
+          </div>
           
           <div class="text-center"><button type="submit">Send Message</button></div>
         </form>

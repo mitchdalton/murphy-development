@@ -247,59 +247,73 @@
       </div>
     </div>
     <div class="col-lg-8 mt-5 mt-lg-0 reveal">
-      <form name="Contact-Us-Homepage" action="/form-submit-success.html" method="POST" data-netlify="true"  netlify-honeypot="bot-field" class="contact-form php-email-form">
-        <div hidden aria-hidden="true">
-          <label>
-            Don't fill this out if you're human: 
-            <input name="bot-field"/>
-          </label>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name*" required>
-          </div>
-
-          <div class="col-md-6 form-group">
-            <input type="email" name="email" class="form-control"  id="email" placeholder="Your Email*" required>
-          </div>
-
-          <div class="col-md-6 form-group">
-            <input type="tel" name="tel" class="form-control" id="tel" placeholder="Your Phone Number*" required>
-          </div>
-
-          <div class="col-md-6 form-group">
-            <select name="I-am-interested-in" id="reason-for-contact" class="form-select">
-              <option value="">I am interested in:</option>
-              <option value="Scheduling-an-Appointment">Scheduling an Appointment</option>
-              <option value="Dental-Implant">Dental Implant</option>
-              <option value="Wisdom-Teeth-Extraction">Wisdom Teeth Extraction</option>
-              <option value="TMJ-Disorder">TMJ Disorder</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-
-          <div class="col-md-6 form-group">
-            <select name="How-did-you-hear-about-us" id="hear-about" class="form-select">
-              <option value="">How did you hear about us?</option>
-              <option value="Dentist-Orthodontist">Dentist/Orthodontist</option>
-              <option value="Friend-Family">Friend/Family</option>
-              <option value="Search-Engine">Search Engine</option>
-              <option value="Social-Media">Social Media</option>
-              <option value="Advertisement">Advertisement</option>
-              <option value="School-Newsletter">School Newsletter</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-        </div>
+      <form name="Contact-Us-Homepage" 
+              class="contact-form php-email-form"
+              action="/form-submit-success.html" 
+              method="POST" 
+              data-netlify="true"  
+              netlify-honeypot="bot-field"
+              data-netlify-recaptcha="true" >
         
-        <div class="form-group mt-3">
-          <textarea class="form-control" name="message" rows="5" placeholder="Comments/Questions&#10;(Please do not use this form to communicate private health information.)" id="message"></textarea>
-        </div>
-        <span>* required</span>
-   
-        <div class="text-center"><button type="submit">Send Message</button></div>
-      </form>
+          <!-- Honeypot. Netlify will reject form submission if a bot fills this out -->
+          <div hidden aria-hidden="true">
+            <label>
+              Don't fill this out if you're human: <input name="bot-field"/>
+            </label>
+          </div>
+  
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name*" required>
+            </div>
+  
+            <div class="col-md-6 form-group">
+              <input type="email" name="email" class="form-control"  id="email" placeholder="Your Email*" required>
+            </div>
+  
+            <div class="col-md-6 form-group">
+              <input type="tel" name="tel" class="form-control" id="tel" placeholder="Your Phone Number*" required>
+            </div>
+  
+            <div class="col-md-6 form-group">
+              <select name="I-am-interested-in" id="reason-for-contact" class="form-select">
+                <option value="">I am interested in:</option>
+                <option value="Scheduling-an-Appointment">Scheduling an Appointment</option>
+                <option value="Dental-Implant">Dental Implant</option>
+                <option value="Wisdom-Teeth-Extraction">Wisdom Teeth Extraction</option>
+                <option value="TMJ-Disorder">TMJ Disorder</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            
+  
+            <div class="col-md-6 form-group">
+              <select name="How-did-you-hear-about-us" id="hear-about" class="form-select">
+                <option value="">How did you hear about us?</option>
+                <option value="Dentist-Orthodontist">Dentist/Orthodontist</option>
+                <option value="Friend-Family">Friend/Family</option>
+                <option value="Search-Engine">Search Engine</option>
+                <option value="Social-Media">Social Media</option>
+                <option value="Advertisement">Advertisement</option>
+                <option value="School-Newsletter">School Newsletter</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+  
+          </div>
+  
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Comments/Questions&#10;(Please do not use this form to communicate private health information.)" id="message"></textarea>
+          </div>
+          <span>* required</span>
+
+          <div class="form-group form-captcha" data-netlify-recaptcha="true">
+            <!-- netlify rendered CAPTCHA -->
+          </div>
+          
+          <div class="text-center"><button type="submit">Send Message</button></div>
+        </form>
     </div>
     
 
