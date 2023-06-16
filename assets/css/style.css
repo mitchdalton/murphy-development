@@ -1750,12 +1750,6 @@ section {
   padding: 8px;
 }
 
-@media (max-width: 991px) {
-  .contact .php-email-form .form-captcha {
-    margin: auto;
-  }
-}
-
 .contact .form-select {
   color: gray;
 }
