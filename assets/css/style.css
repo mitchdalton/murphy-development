@@ -1746,6 +1746,18 @@ section {
   padding-bottom: 8px;
 }
 
+.contact .php-email-form .form-captcha {
+  padding: 8px;
+}
+
+@media (max-width: 768px) {
+  #footer-links-1, #footer-links-2, #footer-contact {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .contact .form-select {
   color: gray;
 }
