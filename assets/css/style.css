@@ -2511,6 +2511,25 @@ section {
   left: 0px;
 }
 
+.inner-pages .patient-info .patient-info-appointment{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.inner-pages .patient-info .patient-info-appointment > div {
+  width: 50%;
+  padding: 10px;
+}
+
+@media (max-width: 992px) {
+  .inner-pages .patient-info .patient-info-appointment > div {
+    width: 100%;
+}
+}
+
 .inner-pages .patient-info h4 {
   text-align: center;
   padding-top: 30px;
