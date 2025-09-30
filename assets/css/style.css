@@ -2516,3 +2516,10 @@ section {
   padding-top: 30px;
 }
 
+.inner-pages .patient-info img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px gray;
+}
+
