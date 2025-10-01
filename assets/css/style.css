@@ -2241,8 +2241,20 @@ section {
   list-style-type: disc;
 }
 
-.inner-pages .about .procedure-section-alt-bg-color {
+.procedures-title {
+  background-color: transparent !important;
+}
+
+.inner-pages .procedures-background {
+  padding-top: 600px;
+}
+
+.inner-pages .about .procedure-section-alt-bg-color-1 {
   background-color: rgb(240, 239, 239);
+}
+
+.inner-pages .about .procedure-section-alt-bg-color-2 {
+  background-color: rgb(230, 229, 229);
 }
 
 .procedure-container {
@@ -2509,6 +2521,28 @@ section {
   right: 0px;
   bottom: 0px;
   left: 0px;
+}
+
+
+.inner-pages .procedures-background{
+  position: relative;
+  z-index: 0;
+}
+
+.inner-pages .procedures-background::before {
+  content: "";
+  background-image: url("../img/staff/Funny\ wheelchair\ photo.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+
+  opacity: 1;
+  z-index: -1;
 }
 
 .inner-pages .patient-info .patient-info-appointment{
