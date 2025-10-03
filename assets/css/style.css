@@ -2177,51 +2177,70 @@ section {
 
 
 
-/* Special hero for Procedures Page */
+/* Special heros for Procedures and Patient Info Page */
 
-#inner-hero-procedures {
+#inner-hero-procedures, 
+#inner-hero-patient-info {
     padding-top: 0px;
   } 
 
 @media (max-width: 20082px) {
-    #inner-hero-procedures, .inner-hero-container-procedures {
+    #inner-hero-procedures, 
+    .inner-hero-container-procedures, 
+    #inner-hero-patient-info, 
+    .inner-hero-container-patient-info {
     height: 900px;
   }
 }
 
 @media (max-width: 2082px) {
-    #inner-hero-procedures, .inner-hero-container-procedures {
+    #inner-hero-procedures, 
+    .inner-hero-container-procedures, 
+    #inner-hero-patient-info, 
+    .inner-hero-container-patient-info {
     height: 800px;
   }
 }
 
 @media (max-width: 992px) {
-    #inner-hero-procedures, .inner-hero-container-procedures {
+    #inner-hero-procedures, 
+    .inner-hero-container-procedures, 
+    #inner-hero-patient-info, 
+    .inner-hero-container-patient-info {
     height: 600px;
   } 
 }
 
 @media (max-width: 720px) {
-    #inner-hero-procedures, .inner-hero-container-procedures {
+    #inner-hero-procedures, 
+    .inner-hero-container-procedures, 
+    #inner-hero-patient-info, 
+    .inner-hero-container-patient-info {
     height: 400px;
   } 
 }
 
 @media (max-width: 510px) {
-    #inner-hero-procedures, .inner-hero-container-procedures {
+    #inner-hero-procedures, 
+    .inner-hero-container-procedures, 
+    #inner-hero-patient-info, 
+    .inner-hero-container-patient-info {
     height: 300px;
   }
 } 
 
 @media (max-width: 384px) {
-    #inner-hero-procedures, .inner-hero-container-procedures {
+    #inner-hero-procedures, 
+    .inner-hero-container-procedures, 
+    #inner-hero-patient-info, 
+    .inner-hero-container-patient-info {
     height: 175px;
   }
 }
 
 
-
-.crossfade-procedures > figure {
+.crossfade-procedures > figure,
+.crossfade-patient-info> figure {
   backface-visibility: hidden;
   background-size: cover;
   left: 0px;
@@ -2235,10 +2254,14 @@ section {
 
 .crossfade-procedures > figure:nth-child(1) { 
   background-image: url('/assets/img/staff/Funny\ wheelchair\ photo.webp'); 
-  /* background-attachment: fixed; */
 }
 
-.inner-hero-container-procedures {
+.crossfade-patient-info > figure:nth-child(1) { 
+  background-image: url('/assets/img/staff/Tree\ photo.webp'); 
+}
+
+.inner-hero-container-procedures,
+.inner-hero-container-patient-info {
   align-items: center;
   align-content: center;
   width: 100%;
@@ -2246,7 +2269,8 @@ section {
   color: white;
 }
 
-.inner-hero-container-procedures h2 {
+.inner-hero-container-procedures h2,
+.inner-hero-container-patient-info h2 {
   color: white;
 }
 
@@ -2637,10 +2661,7 @@ section {
   flex-wrap: wrap;
 }
 
-.inner-pages .patient-info .patient-info-appointment > div {
-  width: 50%;
-  padding: 10px;
-}
+
 
 @media (max-width: 992px) {
   .inner-pages .patient-info .patient-info-appointment > div {
