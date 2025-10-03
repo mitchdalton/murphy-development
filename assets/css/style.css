@@ -2625,7 +2625,9 @@ section {
 }
 
 
-
+#patient-info-container {
+  padding-top: 0px;
+}
 
 .inner-pages .patient-info .patient-info-appointment{
   display: flex;
