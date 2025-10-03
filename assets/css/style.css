@@ -559,6 +559,7 @@ ul {
   /* background-attachment: fixed; */
 }
 
+
 @keyframes imageAnimation {  
   from {background-position: left;}
   to   {background-position: right;}
@@ -2166,6 +2167,84 @@ section {
   color: white;
 }
 
+
+
+
+
+
+
+
+
+
+
+/* Special hero for Procedures Page */
+
+#inner-hero-procedures {
+    padding-top: 0px;
+  } 
+
+@media (max-width: 20082px) {
+    #inner-hero-procedures, .inner-hero-container-procedures {
+    height: 900px;
+  }
+}
+
+@media (max-width: 2082px) {
+    #inner-hero-procedures, .inner-hero-container-procedures {
+    height: 800px;
+  }
+}
+
+@media (max-width: 992px) {
+    #inner-hero-procedures, .inner-hero-container-procedures {
+    height: 600px;
+  } 
+}
+
+@media (max-width: 720px) {
+    #inner-hero-procedures, .inner-hero-container-procedures {
+    height: 400px;
+  } 
+}
+
+.crossfade-procedures > figure {
+  backface-visibility: hidden;
+  background-size: cover;
+  left: 0px;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.crossfade-procedures > figure:nth-child(1) { 
+  background-image: url('/assets/img/staff/Funny\ wheelchair\ photo.webp'); 
+  /* background-attachment: fixed; */
+}
+
+.inner-hero-container-procedures {
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.inner-hero-container-procedures h2 {
+  color: white;
+}
+
+/* End Special hero for Procedures*/
+
+
+
+
+
+
+
+
 .affiliations {
   display: flex;
   flex-flow: row wrap;
@@ -2242,12 +2321,20 @@ section {
 }
 
 .procedures-title {
-  background-color: transparent !important;
+  position: relative;                /* needed so children can layer correctly */
+  min-height: 100vh;                 /* make it at least full viewport height */
+  display: flex;                     /* optional: center the text */
+  align-items: center;               /* vertically center */
+  justify-content: center;           /* horizontally center */
+  text-align: center;
+  
+  background-image: url("../img/staff/Funny%20wheelchair%20photo.webp");
+  background-repeat: no-repeat;
+  background-size: cover;            /* fill the div */
+  background-position: top center;   /* show the top of the image */
+  color: white;                      /* make text readable */
 }
 
-.inner-pages .procedures-background {
-  padding-top: 600px;
-}
 
 .inner-pages .about .procedure-section-alt-bg-color-1 {
   background-color: rgb(240, 239, 239);
@@ -2524,26 +2611,7 @@ section {
 }
 
 
-.inner-pages .procedures-background{
-  position: relative;
-  z-index: 0;
-}
 
-.inner-pages .procedures-background::before {
-  content: "";
-  background-image: url("../img/staff/Funny\ wheelchair\ photo.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-
-  opacity: 1;
-  z-index: -1;
-}
 
 .inner-pages .patient-info .patient-info-appointment{
   display: flex;
