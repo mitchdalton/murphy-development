@@ -2207,6 +2207,20 @@ section {
   } 
 }
 
+@media (max-width: 510px) {
+    #inner-hero-procedures, .inner-hero-container-procedures {
+    height: 300px;
+  }
+} 
+
+@media (max-width: 384px) {
+    #inner-hero-procedures, .inner-hero-container-procedures {
+    height: 175px;
+  }
+}
+
+
+
 .crossfade-procedures > figure {
   backface-visibility: hidden;
   background-size: cover;
