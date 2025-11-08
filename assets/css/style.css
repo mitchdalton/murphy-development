@@ -2680,7 +2680,7 @@ section {
   position: fixed; /* keeps it floating above content */
   width: 60px;
   height: auto;
-  opacity: 0.5;
+  opacity: 0.08;
   transform: scale(0.7);
   transition: opacity 0.3s ease, transform 0.3s ease;
   z-index: 9999;
@@ -2691,4 +2691,8 @@ section {
 .hidden-pedro:active {
   opacity: 1;
   transform: scale(1);
+}
+
+.pedro-image {
+  padding-top: 15px;
 }
