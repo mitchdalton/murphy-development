@@ -48,7 +48,23 @@
   
   
     
-    
+/**
+* REVEAL PEDRO THE DINOSAUR - pedro is revealed upon hover or tap
+*/
+
+document.addEventListener('DOMContentLoaded', () => {
+  const pedro = document.querySelector('.hidden-pedro');
+  if (!pedro) return;
+
+  // randomize position
+  const maxX = window.innerWidth - pedro.width;
+  const maxY = window.innerHeight - pedro.height;
+  const randomX = Math.random() * maxX;
+  const randomY = Math.random() * maxY;
+
+  pedro.style.left = `${randomX}px`;
+  pedro.style.top = `${randomY}px`;
+})
     
   
 

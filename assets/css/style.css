@@ -540,46 +540,16 @@ ul {
   z-index: -1;
 }
 
-.crossfade > figure:nth-child(1) { 
+.crossfade > figure { 
   background-image: url('../img/hero-bgs/forest.jpg'); 
   /* background-attachment: fixed; */
 }
-.crossfade > figure:nth-child(2) {
-  animation-delay: 15s;
-  background-image: url('../img/hero-bgs/forest.jpg');
-  /* background-attachment: fixed; */
-}
-.crossfade > figure:nth-child(3) {
-  animation-delay: 30s;
-  background-image: url('../img/hero-bgs/forest.jpg');
-  /* background-attachment: fixed; */
-}
-.crossfade > figure:nth-child(4) {
-  animation-delay: 45s;
-  background-image: url('../img/hero-bgs/forest.jpg');
-  /* background-attachment: fixed; */
-} 
 
 
-.crossfade-contact-us > figure:nth-child(1) { 
+.crossfade-contact-us > figure { 
   background-image: url('../img/staff/sillyD.webp'); 
   /* background-attachment: fixed; */
 }
-.crossfade-contact-us > figure:nth-child(2) {
-  animation-delay: 15s;
-  background-image: url('../img/staff/sillyD.webp');
-  /* background-attachment: fixed; */
-}
-.crossfade-contact-us > figure:nth-child(3) {
-  animation-delay: 30s;
-  background-image: url('../img/staff/sillyD.webp');
-  /* background-attachment: fixed; */
-}
-.crossfade-contact-us > figure:nth-child(4) {
-  animation-delay: 45s;
-  background-image: url('../img/staff/sillyD.webp');
-  /* background-attachment: fixed; */
-} 
 
 
 @keyframes imageAnimation {  
@@ -591,9 +561,8 @@ ul {
   2%   {animation-timing-function: ease-out;
         opacity: 1;}
 
-  25%  {opacity: 1;}
-  30%  {opacity: 0}
-  100% {opacity: 0}
+  98%  {opacity: 1;}
+  100% {opacity: 0;}
 }
 
 #hero {
@@ -2703,3 +2672,23 @@ section {
   box-shadow: 1px 1px 10px gray;
 }
 
+
+
+/* PEDRO STUFF */
+
+.hidden-pedro {
+  position: fixed; /* keeps it floating above content */
+  width: 60px;
+  height: auto;
+  opacity: 0.05;
+  transform: scale(0.7);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.hidden-pedro:hover,
+.hidden-pedro:active {
+  opacity: 1;
+  transform: scale(1);
+}
