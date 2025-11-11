@@ -2696,3 +2696,43 @@ section {
 .pedro-image {
   padding-top: 15px;
 }
+
+.pedro-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(25, 25, 25, 0.9);
+  color: #fff;
+  font-family: system-ui, sans-serif;
+  font-size: 0.9rem;
+  padding: 14px 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  max-width: 240px;
+  line-height: 1.3;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 99999;
+}
+
+.pedro-popup.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pedro-popup button {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  transition: color 0.2s ease;
+}
+
+.pedro-popup button:hover {
+  color: #fff;
+}

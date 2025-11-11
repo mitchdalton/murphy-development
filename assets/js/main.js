@@ -65,6 +65,34 @@ document.addEventListener('DOMContentLoaded', () => {
   pedro.style.left = `${randomX}px`;
   pedro.style.top = `${randomY}px`;
 })
+
+// give the user a popup to inform them about the pedro thing
+
+document.addEventListener('DOMContentLoaded', () => {
+  const popup = document.getElementById('pedro-popup');
+  const closeBtn = document.getElementById('close-pedro-popup');
+
+  // Check if popup was already shown this session
+  if (sessionStorage.getItem('pedroPopupShown')) return;
+
+  // Mark it as shown
+  sessionStorage.setItem('pedroPopupShown', 'true');
+
+  // Show after a short delay
+  setTimeout(() => {
+    popup.classList.add('show');
+  }, 800);
+
+  // Manual close
+  closeBtn.addEventListener('click', () => {
+    popup.classList.remove('show');
+  });
+
+  // Auto-hide after 6 seconds
+  setTimeout(() => {
+    popup.classList.remove('show');
+  }, 6000);
+});
     
   
 
