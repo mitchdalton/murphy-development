@@ -89,10 +89,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Auto-hide after 6 seconds
-  setTimeout(() => {
+  
+  /* setTimeout(() => {
     popup.classList.remove('show');
-  }, 6000);
-});
+  }, 60000); */
+}); 
     
   
 
